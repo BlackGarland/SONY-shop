@@ -1,0 +1,37 @@
+*{margin: 0; padding: 0;}
+body{
+	font-family: "microsoft yahei";
+	font-size: 14px;
+	background-color: #1F1F1F;
+}
+li{list-style: none;}
+a{ text-decoration: none;}
+img{ width: 100%;}
+#boxhdp{ width: 600px; height: 300px;margin: 0 auto; margin-top: 30px; overflow: hidden; position: relative;}
+#img>li{ width: 100%; height: 100%; float: left; text-align: center; display: none;}
+#img>.current{display: block;}
+#li{position: absolute;
+    left: 50%;
+    bottom: 15px;
+    margin-left: -35px;}
+#li>li{ width: 10px;height: 10px; background-color: #ccc; border-radius: 50%; margin-right: 5px; float: left; cursor: pointer;}
+#li>.on{ background-color: #f50;}
+#an{ display: none;}
+#an a{
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(0,0,0,.3);
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+	font-family: "宋体";
+	font-weight: 600;
+	font-size: 1.2em;
+}
+#an a:hover{
+	background-color: rgba(0,0,0,.8);
+}
+#an .an-a2{ right: 0;}

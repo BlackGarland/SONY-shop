@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>应用授权</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       
+        .top{
+            width: 100%;
+            height: 60px;
+            position: relative;
+          
+            
+            background-color: rgba(255, 76, 22, 0.979);
+        }
+        .top img{
+            position: absolute;
+            left: 50% ;
+            margin-left: -80px;
+        }
+        /* .all{
+
+            position: relative;
+            width: 100%;
+            height: 1000px;
+        } */
+        
+        .main{
+            width: 760px;
+            height: 450px;
+            margin: auto;
+            position: relative;
+            top: 50px;
+        }
+       
+        .agreement{
+            width: 380px;
+            height: 330px;
+            font-size: 13px;
+            color: rgb(109, 109, 109);
+            border-right: orangered solid 1px;
+            position: absolute;
+  
+
+        }
+        .agreement h5 {
+            display: block;
+            font-size: 1.17em;
+            color: #000;
+            margin-top: 0;
+            margin-left: 120px;
+            
+        }
+        .yingyong,#use{
+            width: 230px;
+            height: 25px;
+            margin-top: 15px;
+        }
+        .yingyong a{
+            text-decoration: none;
+            color: rgb(132, 148, 241);
+        }
+        li{
+            margin-left: 20px;
+        }
+        .dianji{
+            width: 300px;
+            height: 25px;
+            margin-top: 15px;
+            color: black;
+        }
+        .dianji a{
+            color: orangered;
+        }
+        .focus{
+            width: 340px;
+            height: 25px;
+        }
+
+        .code{
+            width: 380px;
+            height: 330px;
+           
+           position: absolute;
+           top:0px;
+           left: 400px;
+            
+        }
+        .code h5{
+            display: block;
+            font-size: 1.17em;
+            color: #000;
+            margin-top:40px;
+            margin-left: 40px;
+        }
+        .erweima{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+        .sao{
+            position: absolute;
+            top:250px;
+            left: 60px;
+        }
+        .pc{
+            position: absolute;
+            top: 0;
+            left: 240px;
+            cursor: pointer;
+        }
+        .mm{
+            width: 300px;
+            height: 30px;
+            font-size: 13px;
+            position: absolute;
+            top: 300px;
+            left: 250px;
+        }
+        .mm span{
+            color: rgb(109, 109, 109);
+            padding-left: 10px;
+            cursor: pointer;
+        }
+        .footer{
+            width: 100%;
+            height: 100px;
+            background-color: rgba(245, 240, 240, 0.918);
+            position: absolute;
+            top: 500px;
+        }
+        .bottom{
+            color: rgb(109, 109, 109);
+            position: absolute;
+            left: 50%;
+            margin-left: -120px;
+          /*   margin-left: 570px; */
+        }
+
+    </style>
+</head>
+<body>
+   <!-- <div class="all"> -->
+        <div class="top">
+             <img src="./img/taobaowang.png">
+        </div>
+      
+        <div class="main">
+            <div class="agreement">
+                <h5>登录并授权协议</h5>
+                <p class="yingyong"> 应用【 <a href="#">索尼中国</a> 】将获得以下权限:</p>
+                <ul>
+                    <div id="use" class="width:200px;height:100px;overflow:scroll;">
+                        <li>使用你的公开信息（昵称、头像等）</li>
+                    </div>
+                </ul>
+                <p class="dianji">点击授权并登录表示您已阅读并同意 <a href="#" title="">授权须知</a></p>
+                <p class="focus">注：授权后可到【卖家中心-应用授权】对授权信息进行管理</p>
+            </div>
+            <div class="code">
+                <h5>手机扫码，安全登录</h5>
+                <img src="./img/pc.png" class="pc">
+                <img src="./img/tberweima.png" class="erweima">
+                <img src="./img/sao.png" class="sao">
+                <div class="mm">
+                    <span>密码登录</span> <span>免费注册</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="bottom">
+                <span>授权管理 | 意见反馈 | 申请接入</span>
+            </div>    
+        </div>
+    <!-- </div> -->
+</body>
+</html>

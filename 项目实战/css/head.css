@@ -1,0 +1,452 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    position: relative;
+}
+
+.header {
+    height: 105px;
+    background-color: #000;
+    width: 100%;
+}
+
+.header-main {
+    height: 105px;
+    width: 960px;
+    margin: 0px auto;
+    position: relative;
+    z-index: 100;
+}
+.header-top
+{
+    margin-top: 10px;
+    height: 57px;
+}
+
+.suoni-logo a {
+    float: left;
+    width: 110px;
+    height: 57px;
+    text-indent: -1000px;
+    background: url(../img/suoni-logo.jpg) no-repeat 0 center;
+    margin-left: 16px;
+    position: absolute;
+}
+
+.header-userInfo {
+    float: right;
+    margin-right: 17px;
+}
+
+.site {
+    width: 120px;
+    height: 16px;
+ 
+    background-position-y: 4px;
+    display: block;
+    float: left;
+    margin-top: 10px;
+  border-top-left-radius: 15%;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+}
+
+
+
+.site a {
+    font-family: "Microsoft YaHei", Arial, "Hiragino Sans GB", Sans-Serif;
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 8px;
+    
+
+
+    color: #787878;
+    
+    text-decoration: none;
+   position: absolute;
+
+
+}
+
+.BUTTON {
+    background-color: black;
+    border: none;
+    float: right;
+    padding-left: 15px;
+
+    margin-top: 10px;
+}
+
+.BUTTON a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.header-buttom{
+    height: 48px;
+    width: 960px;
+    
+}
+.header-buttom ul{
+    width: 700px;
+}
+.header-buttom li{
+    
+
+    display: inline-block;
+    width: 103px;
+    background-position: 0px 0px;
+    height: 48px;
+ 
+    position: relative;
+    z-index: 100;
+    
+  
+    
+}
+.header-buttom li:hover{
+    
+border-bottom: 4px solid skyblue;
+    display: inline-block;
+    width: 103px;
+    background-position: 0px 0px;
+    height: 48px;
+ 
+    position: relative;
+    z-index: 100;
+    
+  
+    
+}
+.header-buttom li a{
+    line-height: 48px;
+    color: #fff;
+text-decoration: none;
+font-size: smaller;
+
+  
+    
+}
+.dropdown{
+    margin-left: 15px;
+
+}
+.sousuo{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    border: rgb(66, 66, 66) solid 2px;
+    position: absolute;
+    top: 58px;
+    right: 13px;
+
+}
+
+#btn{
+ 
+    width: 157px;
+    height: 36px;
+    border: none;
+    background-color: black;
+    list-style: none;
+    border: darkgrey 1px solid;
+}
+#btn:hover{
+    background-color: #f0f1f2;
+}
+.warp{
+    width: 1250px;
+    height: 520px;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+
+}
+.list{
+    width: 1250px;
+    height: 520px;
+    list-style: none;
+    position: relative;
+    padding-left: 0px;
+    
+}
+.item{
+    width: 1200px;
+    height: 520px;
+    color: white;
+    font-size: 50px;
+    position: absolute;
+
+    transition: all .8s;
+
+
+}
+.item:nth-child(1){
+    background-image: url(../img/56.png);
+}
+.item:nth-child(2){
+    background-image: url(../img/57.jpg);
+}
+
+.item:nth-child(3){
+    background-image: url(../img/58.jpg);
+}
+.btn{
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    top: 190px;
+    z-index: 100;
+    background-color: rgb(0, 0, 0,0.02);
+    border: none;
+    font-size: 70px;
+
+    
+
+
+}
+#goPre{
+    left: 0px;
+}
+#goNext{
+    right: 50px;
+}
+.item.active{
+    z-index: 10;
+}
+.pointList{
+    padding-left: 0px;
+    list-style: none;
+    position: absolute;
+    right: 600px;
+    bottom: 20px;
+    z-index: 10000;
+    
+}
+.point{
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    float: left;
+    margin-right: 14px;
+border: solid darkgray 2px;
+cursor: pointer;
+
+
+
+}
+.point.active{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+    
+
+    .block {
+        margin-top: 40px;
+        background: #f0f1f3;
+        padding-bottom: 30px;
+        width: 100%;
+        height: 3198px;
+    
+    }
+    .a-top{
+        width: 1220px;
+        height: 82px;
+        text-align: center;
+        font-size: 24px;
+        color: #000;
+        font-weight: normal;
+        line-height: 82px;
+    }
+    .a{
+        width: 1230px;
+        height: 792px;
+        margin: auto;
+    }
+    .a-left{
+        width: 600px;
+        height: 700px;
+        display: inline-block;
+
+    }
+    .a-right{
+        width: 610px;
+        height: 710px;
+        float: right;
+        position: relative;
+
+    }
+   .a-right-one{
+       width: 305px;
+       height: 350px;
+       background-color: #fff;
+       position: absolute;
+   }
+   .a-right-two{
+    width: 305px;
+    height: 350px;
+    background-color: #fff;
+    position: absolute;
+    margin-top:355px ;
+    margin-left: 315px;
+}
+.a-right-three{
+    width: 305px;
+    height: 350px;
+    background-color: #fff;
+    position: absolute;
+    margin-top: 355px;
+    
+    
+}
+.a-right-four{
+    width: 305px;
+    height: 350px;
+    background-color: #fff;
+    position: absolute;
+    margin-left: 315px;
+
+}
+.tubiao1{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.xiangji{
+   float: left;
+  margin-top: -10px;
+   margin-left: 40px;
+}
+.title-a{
+    float: left;
+   margin-left: 60px;
+   font-size: 14px;
+   margin-top: 20px;
+   
+
+ 
+   color: #333;
+   line-height: 14px;
+   margin-bottom: 0px;
+}
+.center{
+    width: 1200px;
+    height: 592px;
+    background: #f0f1f3;
+    margin: auto;
+    margin-top: 40px;
+    position: relative;
+
+}
+.left{
+    width: 320px;
+    height: 540px;
+  
+    margin-top: 50px;
+    margin-left: 120px;
+    position: absolute;
+
+}
+.Airpeak{
+    width: 315px;
+   height:  84px;
+   margin-top: 12px;
+   
+   
+   
+}
+.img1{
+    display: inline-block;
+}
+
+.date{
+    float: left;
+   
+    
+    width: 72.08px;
+    height: 18px;
+    background-color: #d0d1d3;
+    color: #f0f1f2;
+    padding: 0 5px;
+    line-height: 18px;
+    margin-left: 130px;
+    margin-top: -82px;
+    font-size: 13px;
+
+}
+.dis{
+    width: 150px;
+    height: 41px;
+    
+   margin-left: 130px;
+   margin-top: -52px;
+    font-family: "Microsoft YaHei",Arial,"Hiragino Sans GB",Sans-Serif;
+    font-size: 12px;
+
+    color: #787878;
+}
+
+
+.zhong{
+    width: 320px;
+    height: 540px;
+  
+    margin-top: 50px;
+    margin-left: 320px;
+    position: absolute;
+    top: -50px;
+    
+}
+  .jingling{
+    width: 960px; 
+    height: 274px;
+     border: green 2px solid;
+     margin-top: 100px;
+    position: absolute;
+     
+  }
+  .help{
+      width: 100%;
+      height: 297px;
+      background-color:#000;
+      margin-top: 80px;
+      
+     
+      top: 550px;
+  }
+
+.help dl {
+	float: left;
+	width: 195px;
+}
+.help dt {
+	font-family: "Microsoft YaHei",Arial,"Hiragino Sans GB",Sans-Serif;
+    font-size: 15px;
+    line-height: 18px;
+    width: 100%;
+    color: #787878;
+}
+.dd1{
+    
+    margin-top: 20px;
+    
+   
+}
+
+.help dd a{
+	color: white;
+	font-size: 12px;
+}
+.help dd a:hover {
+	color:skyblue;
+}
+.help-bottom{
+    padding-left: 500px;
+    padding-top: 30px;
+  
+}
+

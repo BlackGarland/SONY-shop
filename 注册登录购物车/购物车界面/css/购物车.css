@@ -1,0 +1,398 @@
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+		
+		background: #f5f5f5;
+		position: relative;
+		
+	}
+    /* .box{
+        width: 100%;
+        height: 900px;
+        
+        
+    } */
+    .header{
+        /* width: 1400px; */
+        height: 65px;
+        /* position: absolute; */
+        background-color: black;
+
+
+    }
+
+    .top{
+        width: 1000px;
+        height: 65px;
+        margin: auto;
+        background-color:black; 
+        /* position: absolute;   */
+        position: relative;
+    }
+    .top ul{
+        width: 905px;
+        height: 65px;
+        list-style: none;
+    
+        position: absolute;
+        left: 100px;
+    } 
+    .top ul li{
+        display: inline-block;
+        
+        
+        margin-left: 10px;
+        /* margin-top: 0px; */
+        width: 80px;
+        height: 65px;
+    }
+    .top ul li a{
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        height: 65px;
+        line-height: 65px;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+
+    .sony{
+        width: 95px;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 30px;
+        letter-spacing:3px;
+        position: absolute;
+        top: 12px;
+    
+        
+    }  
+    .spc{
+        color: gray;
+    }
+    .user{
+        height: 65px;
+        width: 100px;
+    }
+
+    .xiao{
+        height: 65px;
+        width: 100px;
+        color: white;
+        font-size: 13px;
+        margin-left: 65px;
+    
+    }
+    .user img{
+        width: 13px;
+        height: 13px;
+        position: absolute;
+        top: 25px;
+        left: 480px;
+    }
+    .blue{
+    width: 40px;
+    height: 40px;
+    margin-left: 50px;
+    }
+    .ser{
+        width: 130px;
+        height: 20px;
+        background-color:white;
+        border-radius: 10px;
+    }
+    .ser input{
+        width: 90px;
+        height: 20px;
+        outline-style: none;
+        border-radius: 10px;
+        padding-left: 8px;
+        border: none;
+        position: absolute;
+    }
+    .fang{
+        width: 14px;
+        height: 14px;
+        margin-left: 104px;
+    }
+    .blue{
+        color: blue;
+        cursor: pointer;
+    }
+    .top ul li a:hover{
+        color:rgb(69, 69, 248);
+        background-color: white;
+    }
+    .logo{
+        height: 40px;
+    }
+    .guan{
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        margin-left: 100px;
+    }
+    .guan img{
+        width: 20px;
+        height: 20px;
+    
+        
+    }
+
+
+
+
+
+
+    .My{
+        height: 201px;
+    }
+    .my{
+        width: 1100px;
+        height: 201px;
+        margin: auto;
+        position: relative;
+        /* position: absolute;
+        top: 80px;
+        left: 130px; */
+    }
+    .bluetu img{
+        width: 1100px;
+    }
+    .Car{
+        width: 1100px;
+        height: 30px;
+        margin-top: 25px;
+    
+    }
+    .Car span{
+        color: rgb(48, 45, 45);
+        font-size: 20px;
+        font-weight: 150;
+        font-family: initial;
+        margin-left:10px;
+    }
+    .Car ul{
+        width: 870px;
+        height: 30px;
+        list-style: none;
+        display: inline-block;
+        
+        position: absolute;
+        left: 275px;
+        
+    }
+    .Car ul li{
+        width: 172px;
+        height: 30px;
+        /* background-color:rgb(221, 220, 220); */
+        display: inline-block;
+        padding-left: 100px ;
+        border-radius: 10px;
+    }
+    .tian,.wan{
+        background-color:rgb(221, 220, 220);
+    }
+    .Car ul li a{
+        height: 30px;
+        line-height: 30px;
+        text-decoration: none;
+        color: gray;
+        /* text-align: center; */
+        margin-left: -10px;
+    }
+    .current{
+        background-color: rgb(97, 177, 252);
+    }
+    .free{
+        width: 110px;
+        height: 30px;
+        /* border: solid 1px red; */
+        position: absolute;
+        top: 160px;
+        left: 990px;
+    }
+    .free span{
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px;
+        color:rgb(177, 176, 176);
+        margin-left:5px ;
+        
+    }
+    .no{
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        top: 7px;
+        left: 90px;
+    }
+    .xian{
+        width: 1100px;
+        border-bottom: rgb(211, 209, 209) solid 2px;
+        position: absolute;
+        top: 200px;
+    }
+
+
+    .tbox{
+        height: 650px;
+        margin: auto;
+    }
+    .car{
+        /* margin: auto; */
+        width: 1210px;
+        height: 650px;
+        
+        position: absolute;
+        top: 290px;
+        left: 70px;
+    }
+    .car-top {
+        width: 1210px;
+        height: 76px;
+        font-family: 微软雅黑, Arial;
+        background: #f5f5f5;
+        border-top: solid darkgrey 3px;
+        
+
+    }
+    .car-top li{
+        line-height: 76px;
+    }
+
+    .car-top1 {
+        width: 562px;
+        height: 21px;
+        display: inline-block;
+
+
+    }
+
+    .car-top2 {
+        width: 192px;
+        height: 21px;
+        display: inline-block;
+    }
+
+    .car-top3 {
+        width: 128px;
+        height: 21px;
+        display: inline-block;
+    }
+
+    .car-top4 {
+        width: 230px;
+        height: 21px;
+        display: inline-block;
+    }
+
+    .car-top5 {
+        width: 32px;
+        height: 21px;
+        display: inline-block;
+    }
+    .shangping1{
+        width: 1210px;
+        height: 229px;
+        background-color: #fff;
+    }
+    .shangping1 li{
+        display: inline-block;
+        line-height :170px; 
+
+    }
+    .car-top li{
+        line-height: 76px;
+    }
+
+    .shangping1-a {
+        width: 562px;
+        height: 229px;
+        display: inline-block;
+
+
+    }
+
+    .price {
+        width: 192px;
+        height: 229px;
+        display: inline-block;
+    }
+
+    .shangping1-c {
+        width: 128px;
+        height: 229px;
+        display: inline-block;
+    }
+
+    .total {
+        width: 230px;
+        height: 229px;
+        display: inline-block;
+        font-family: 微软雅黑, Arial;
+        color: #00549f;
+
+    }
+
+    .shangping1-d{
+        width: 32px;
+        height: 229px;
+        display: inline-block;
+    }
+    .shangping2{
+        width: 1210px;
+        height: 229px;
+        background-color: #fff;
+        margin-top: 20px;
+    }
+    .shangping2 li{
+    display: inline-block;
+    line-height :140px; 
+
+    }
+    .shangping2-a {
+        width: 562px;
+        height: 229px;
+        display: inline-block;
+
+
+    }
+    .shangping2-b {
+        width: 128px;
+        height: 229px;
+        display: inline-block;
+    }
+    .shangping2-c{
+        width: 32px;
+        height: 229px;
+        display: inline-block;
+    }
+    .zongji{
+        width: 1210px;
+        height:50px ;
+        background-color: rgb(231, 229, 229);
+        margin-top: 10px;
+        border: slategray solid 2px;
+    }
+    .jiesuan{
+        display: block;
+        width: 210px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        color: #ffffff;
+        font-size: 20px;
+        float: right;
+        background: #0a83d7;
+        margin-left: 25px;
+        cursor: pointer;
+    }
+    .jiesuan:hover{
+        color:blue;
+        background-color: red;
+    }

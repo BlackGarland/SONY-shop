@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="css/css.css"/>
+	<title>js幻灯片</title>
+</head>
+<body>
+	<div id="boxhdp">
+		<ul id="img">
+			<li class="current"><img src="img/t1.png"></li>
+			<li><img src="img/t2.png"></li>
+			<li><img src="img/t3.png"></li>
+			<li><img src="img/t4.png"></li>
+			<li><img src="img/t5.png"></li>
+		</ul>
+		<ul id="li">
+			<li class="on"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<div style="clear: both;"></div>
+		<div class="an" id="an">
+			<a href="javascript:;" id="prev"><</a>
+			<a href="javascript:;" id="next" class="an-a2">></a>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		hdp({
+			li:"li",	//默认值：li;默认用li包裹
+			boxid:"boxhdp",	//最外面div  id
+			imgid:"img",	//图片外面id
+			optid:"li",	//opt外面id	
+			an:"an",		//左右按钮id，用于移上显示和隐藏
+			prev:"prev",	//左边箭头id
+			next:"next",	//右边箭头id
+			ms:3000		//多少毫秒切换一张,默认800毫秒
+		})
+	</script>
+</body>
+</html>

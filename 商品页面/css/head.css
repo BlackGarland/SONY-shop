@@ -1,0 +1,592 @@
+#header {
+    width: auto;
+    height: 65px;
+    background-color: black;
+}
+
+#head_content {
+    width: 1210px;
+    height: 65px;
+    position: relative;
+    margin: 0 auto;
+    z-index: 99;
+}
+
+.sony-logo {
+    /* margin: 23px auto; */
+    /* display: inline-block; */
+    float: left;
+    /* height: 65px; */
+    /* line-height: 65px; */
+}
+
+.logotop {
+    /* width: 109px; */
+    padding-top: 23px;
+    display: block;
+    color: #fff;
+}
+
+#headerNavMain {
+    width: 585px;
+    height: 65px;
+    margin-left: 40px;
+    display: inline-block;
+}
+
+.topBottomNav {
+    float: left;
+}
+
+#toprightnav {
+    position: relative;
+    list-style: none;
+    height: 65px;
+    margin: 0px;
+
+}
+
+#toprightnav li {
+    float: left;
+    /* height: 65px; */
+    line-height: 65px;
+}
+#toprightnav li p{
+    margin: 0px;
+    /* line-height: 65px; */
+
+}
+.sony-logo{
+    margin-left: 25px;
+}
+.sony-logo img{
+    width: 6.25rem;
+max-width: 100px;
+}
+#xialakuang{
+    position: absolute;
+top: 65px;
+left: 0;
+border-bottom: 15px solid #fff;
+width: 64.8px;
+/* padding: 0px; */
+
+}
+#xialakuang li{
+    list-style: none;
+    display: block;
+    
+    /* position: absolute; */
+    display: none;
+}
+#xialakuang li a{
+    position: relative;
+font-size: 12px;
+width: 112px;
+height: 30px;
+line-height: 30px;
+text-align: center;
+}
+#mysony p{
+    text-decoration: none;
+    color: white;
+}
+#mysony:hover{
+    background-color: white;
+    
+
+}
+#mysony:hover p{
+    color: #10a0d5;
+    font-weight: bold;
+}
+#mysony:hover #xialakuang li{
+    display: block;
+    margin: 0px;
+
+}
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+ #mySonyWrap {
+position: relative;
+float: right;
+width: 112px;
+height: 65px;
+margin-right: 110px;
+text-align: center;
+}
+#mySonyWrap p{
+margin: 0px;
+line-height: 65px;
+}
+#mySonyWrap li{
+list-style: none;
+
+}
+#mySonyWrap li a{
+text-decoration: none;
+border: 0 none;
+outline: 0 none;
+font-family: "微软雅黑",Arial;
+position: relative;
+font-size: 12px;
+width: 112px;
+height: 30px;
+line-height: 30px;
+text-align: center;
+background-color: #fff;
+}
+#mySonyWrap a{
+text-decoration: none;
+
+}
+.tit{
+font-size: 14px;
+color: #fff;
+font-weight: bold;
+line-height: 65px;
+cursor: pointer;
+/* background: url(images/dot_down_black.jpg) no-repeat 95px center; */
+text-indent: -7px;
+}
+#mySonyWrap {
+position: relative;
+float: right;
+width: 112px;
+height: 65px;
+margin-right: 110px;
+text-align: center;
+}
+ul {
+list-style-type: none;
+}
+#topRightNav li {
+list-style: none;
+padding: 0px;
+/* background: url(images/nav_line.jpg) no-repeat right center; */
+}
+#topRightNav a:hover{
+color: blue;
+}
+#topRightNav li a {
+display: inline-block;
+color: black;
+}
+.mySonyList{
+display: none ;
+position: absolute;
+top: 65px;
+left: 0;
+border-bottom: 15px solid #fff;
+}
+#mySonyWrap:hover p.tit {
+color: #10a0d5;
+font-weight: bold;
+background-color: white;
+}
+#mySonyWrap:hover .mySonyList{
+display: block;
+}
+
+.tbn{
+width: 229px;
+height: 25px;
+border-radius: 10px;
+background-color: white;
+overflow: hidden;
+margin: 21px 0 0 10px;
+
+}
+#input{
+float: left;
+/* position: relative; */
+width: 180px;
+height: 25px;
+border-style: none;
+margin-left: 5px;
+/* left: -12px; */
+outline:none
+}
+#sear{
+/* display: inline-block; */
+width: 20px;
+height: 18px;
+
+float: left;
+
+/* line-height: 25px; */
+margin-top: 3.5px;
+}
+#myLoginWrap{
+width: 90.8px;
+height: 65px;
+/* border-radius: 50%; */
+}
+#myLoginWrap{
+font-family: 微软雅黑, Arial;
+position: relative;
+padding-right: 15px;
+font-size: 14px;
+color: #1fa8e2;
+/* font-weight: bold; */
+float: right;
+line-height: 65px;
+/* margin-right: 112px; */
+}
+#myLoginWrap a{
+font-family: 微软雅黑, Arial;
+
+
+font-size: 14px;
+color: #1fa8e2;
+font-weight: bold;
+}
+#guanwangWrap{
+width: 48px;
+height: 65px;
+/* display: inline-block; */
+/* position: absolute;
+left: 0;
+top: 0; */
+background: url(/images/guan_bai.png) 13px 18.5px no-repeat;
+float: right;
+}
+#shoppingButtonLink{
+width: 48px;
+height: 65px;
+padding: 0px;
+
+
+
+
+float: right;
+
+}
+#shoppingButtonLink:hover{
+background-color: white;
+}
+#shoppingButtonLink:hover a{
+/* background-color: white; */
+background: url("/images/icon_shopping_1_hover.png") 13px 18.5px no-repeat;
+}
+#shoppingButtonLink a{
+display: inline-block;
+width: 45px;
+height: 65px;
+
+background: url("/images/icon_shopping_1.png") 13px 18.5px no-repeat;
+/* background-size: 13px 18.5px; */
+margin: 0px;
+}
+.shoppingCartArea{
+/* top: 65px; */
+width: 500px;
+min-height: 62px;
+padding: 0px;
+background-color: #fff;
+border: 1px solid #ccc;
+margin: 0px;
+position: absolute;
+right: 48px;
+top: 65px;
+display: none;
+}
+#shoppingButtonLink:hover .shoppingCartArea{
+display: block;
+}
+#btn{
+width: 104px;
+height: 36px;
+color: rgb(221, 215, 215);
+background-color: #0d9cd4;
+float: right;
+margin: 15px 20px ;
+border:none;
+border-radius: 5px;
+
+
+
+}
+.shoppingCartArea span{
+line-height: 62px;
+}
+#zongji{
+margin-left: 15px;
+}
+#count{
+color:  #0d9cd4;
+}
+
+.swiper-container{
+width: 100%;
+height: 720px;
+position: relative;
+overflow: hidden;
+}
+.swiper-wrapper{
+
+width: auto;
+height: 720px;
+/* transform: translate(-4557.6px, 0px,); */
+transition-duration: 0.8s;
+/* overflow: hidden; */
+}
+.swiper-wrapper img{
+display: none;
+}
+
+.swiper-wrapper li{
+display: block;
+/* width: 1523px; */
+position: absolute;
+left: -200.4px;
+height: 720px;
+position: absolute;
+overflow: hidden;
+}
+/* .swiper-wrapper img{
+width: 1523px;
+height: 720px;
+} */
+.new-menu{
+width: 1210px;
+margin: 15px auto;
+position: absolute;
+top: 62px;
+left: 130px;
+width: 190px;
+margin: 0 auto;
+/* background-color: white; */
+/* opacity: 0.9; */
+}
+.new-menu li{
+width: 150px;
+height: 38px;
+margin-left: 20px;
+margin-right: 20px;
+line-height: 38px;
+
+}
+.new-menu ul div{
+background-color: white;
+opacity: 0.9;
+cursor: pointer;
+}
+.new-menu li img{
+float: right;
+margin-top: 11px;
+
+}
+.new-menu span{
+color: black;
+font-family: 微软雅黑, Arial;
+}
+
+
+
+/* 
+.arrow-left{
+background: url("/img/arrows_l.png") no-repeat 0 -82px;
+position: absolute;
+left: 370px;
+top: 285px;
+margin-top: -15px;
+width: 38px;
+cursor: pointer;
+height: 66px;
+z-index: 9;
+
+opacity: 0.8;
+}
+.arrow-right{
+background: url("/img/arrows_r.png") no-repeat 0 -82px;
+position: absolute;
+
+right: 185px;
+top: 285px;
+margin-top: -15px;
+width: 38px;
+cursor: pointer;
+height: 66px;
+z-index: 9;
+
+opacity: 0.8;
+}
+.pagination{
+position: absolute;
+left: 0;
+text-align: center;
+bottom: 95px;
+width: 100%;
+z-index: 2;
+}
+.pagination span{
+display: inline-block;
+width: 10px;
+height: 10px;
+background-color: #cdccca;
+margin: 0 3px;
+cursor: pointer;
+}
+#img01{
+display: block;
+}
+.switch1{
+background-color: #0d9cd4;
+}
+#statusbar{
+position: relative;
+left: 130px;
+top: -36px;
+width: 1270px;
+height: 72px;
+
+background-color: white;
+border-bottom: 1px solid rgb(238, 238, 238);
+
+}
+.user{
+float: left;
+margin-right: 20px;
+}
+
+.user img{
+position: absolute;
+top: -25px;
+left: 20px;
+width: 70px;
+height: 72px;
+}
+.user .status-right {
+padding-left: 115px;
+padding-right: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+
+height: 50px;
+}
+
+#login-info{
+float: left;
+width: 160px;
+height: 20px;
+margin: 0px 20px 10px 0px;
+}
+.status-right{
+width: 360px;
+height: 50px;
+background-color: white;
+}
+.status-right a{
+float: left;
+display: block;
+margin: 0px 20px 10px 0px;
+text-decoration: none;
+}
+.status-right .a1{
+border-radius: 3px;
+width: 68px;
+height: 20px;
+background-color: #fff;
+border: 1px solid #ff6131;
+color: r#ff6131ed;
+text-align: center;
+line-height: 20px;
+font-size: 12px;
+
+}
+.status-right .a12{
+border-radius: 3px;
+width: 68px;
+height: 20px;
+background-color: #fff;
+border: 1px solid #0a83d7;
+color: #0a83d7;
+text-align: center;
+line-height: 20px;
+font-size: 12px;
+
+}
+
+.status-right .a2{
+border-radius: 3px;
+width: 68px;
+height: 20px;
+background-color: #fff;
+border: 1px solid #707070;
+color: #707070;
+text-align: center;
+line-height: 20px;
+font-size: 12px;
+
+}
+.status-right .a1:hover{
+background-color:#ff6131;
+color: white;
+
+}
+.status-right .a12:hover{
+background-color: #0a83d7 ;
+color: white;
+
+}
+.status-right .a2:hover{
+background-color:#707070 ;
+color: white;
+font-weight: 5000;
+
+}
+.status-right .a:hover{
+font-weight: 2000;
+}
+
+.linkimg1{
+width: 70px;
+height: 70px;
+margin-right: 20px;
+float: left;
+background-image: url("/img/icon_bbs_on.jpg");
+
+}
+.linkimg2{
+width: 70px;
+height: 70px;
+margin-right: 20px;
+float: left;
+background-image: url("/img/icon_appcenter_on.jpg");
+
+}
+.linkimg3{
+width: 70px;
+height: 70px;
+margin-right: 20px;
+float: left;
+background-image: url("/img/icon_lives_on.jpg");
+
+}
+.linkimg4{
+width: 70px;
+height: 70px;
+margin-right: 20px;
+float: left;
+background-image: url("/img/icon_news_on.jpg");
+
+}
+.ulbox{
+width: 375px;
+height: 65px;
+float: left;
+overflow: hidden;
+background-color: white;
+font-size: 12px;
+}
+.ulbox li{
+
+color: #707070;
+height: 30px;
+line-height: 12px;
+
+
+} */

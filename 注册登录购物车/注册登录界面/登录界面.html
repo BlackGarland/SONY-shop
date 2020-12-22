@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录注册</title>
+    <script src="./js/common.js"></script>
+    <script src="./js/jquery-1.8.2.js"></script>
+    <style type="text/css"> 
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .Denglu{
+        width: 560px;
+        height: 650px;
+        margin: 50px auto;
+        position: relative;
+    }
+    .top{
+        width: 560px;
+        height: 75px;
+        position: absolute;
+    }
+    .left{
+        width: 250px;
+        height: 75px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .right{
+        width: 250px;
+        height: 75px;
+        position: absolute;
+        top: 0;
+        left: 250px;
+    }
+    .Close{
+        width: 60px;
+        height: 75px;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 500px;
+    }
+    .close{
+        width: 50px;
+        height: 0px;
+        position: absolute;
+        top: 15px;
+        left: 7.5px;
+    }
+    .middle{
+        width: 350px;
+        height: 250px;
+        position: absolute;
+        top: 150px;
+        left: 100px;
+    }
+    .usernum ,.userpass{
+        width: 350px;
+        height: 50px;
+    }
+    #password, #username{
+        width: 300px;
+        height: 50px;
+    }
+    #username{
+        position: absolute;
+        top: 0;
+        left: 50px;
+    }
+    .user {
+        width: 50px;
+        height: 52px;
+        border: solid 1px  rgb(175, 174, 174);
+        background-color: rgb(247, 241, 241);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .user img  ,.lock img{
+        width: 25px;
+        height: 25px;
+        margin: 13px;
+    }
+    #password{
+        position: absolute;
+        top: 75px;
+        left: 50px;
+    }
+    .lock {
+        width: 50px;
+        height: 52px;
+        border: solid 1px  rgb(175, 174, 174);
+        background-color: rgb(247, 241, 241);
+        position: absolute;
+        top: 75px;
+        left: 0;
+    }
+   .check{
+        width: 350px;
+        height: 25px;
+        position: absolute;
+        top: 150px;
+        left: 0;
+       
+    }
+    .check input{
+        width: 15px;
+        height: 15px;
+        margin: 5px; 
+    }
+    .remmber{
+        line-height: 25px;
+        text-align: center;
+        color: grey;
+        font-size: 15px;
+    }
+    .forget{
+        line-height: 25px;
+        text-align: center;
+        color: grey;
+        font-size: 15px;
+        position: absolute;
+        right:0 ;
+        cursor: pointer;
+    }
+    .denglu{
+        width: 350px;
+        height: 50px;
+        position: absolute;
+        top: 200px;
+        left: 0;
+        background-color: rgb(85, 85, 253); 
+    }
+    .denglu p{
+        color:white ;
+        line-height: 50px;
+        font-size: 25px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .denglu p:hover{
+        color: blue;
+    }
+    .pb{
+        width: 350px;
+        height: 25px;
+        position: absolute;
+        top: 275px;
+        left: 30px;
+        color: grey;
+        font-size: 13px;
+    }
+    .bottom{
+        width: 350px;
+        height: 150px;
+        position: absolute;
+        top: 310px;
+        cursor: pointer;
+    }
+    .xian{
+        color: rgb(216, 211, 211);
+        font-size: 15px;
+    }
+    #up{
+        width: 350px;
+        height: 25px;
+        position: absolute;
+        top: 170px;
+        left: 40px;
+        color: blue;
+        font-size: 13px;
+        display: none;
+    }
+    
+    .bottom img{
+        width: 75px;
+        margin-left: 8px;
+        margin-top: 8px;
+    }
+    input{
+        outline: none;
+    }
+ 
+    </style>
+</head>
+<body>
+    <div class="Denglu">
+        <div class="top">
+            <a href="./登录界面.html"><img src="./img/login_btn_01.jpg" class="left"></a>
+            <a href="./注册界面.html"><img src="./img/login_btn_02.jpg" class="right"></a>
+            <div class="Close"><a href="#"><img src="./img/close228.jpg" class="close"></a></div>
+        </div>
+        <div class="middle">
+            <div class="usernum">
+            <div class="user"><img src="./img/usr.png"></div>
+            <input  name="" id="username" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;邮箱/ID/手机" />
+            </div>
+            <div class="userpass">
+            <div class="lock"><img src="./img/pass.png"></div>
+            <input  name="" id="password" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;密码"/>
+            </div>
+            <div class="check">
+                <input type="checkbox" >&nbsp;&nbsp;
+                <span class="remmber">记住用户名</span>
+                <span class="forget">忘记密码</span>
+            </div>
+            <div class="denglu"><p>登录</p></div>
+            <p class="pb">如果您的用户名密码无法登录，请联系400-810-1228</p>
+            <div class="bottom">
+                <div class="xian">
+                    <p>———————&nbsp; 其他登录方式 ————————</p>
+                </div>
+                <a href="./跳转淘宝登录界面.html"><img src="./img/taobao.png" title="淘宝"></a> 
+                <img src="./img/weixin.png" title="微信"  class="way">
+                <img src="./img/weibo.png" title="微博" class="way">
+                <img src="./img/zhifubao.png"title="支付宝" class="way">
+                <span id="up">*该授权登陆方式即将上线，感谢您的关注与支持！</span>
+            </div>
+        </div> 
+    </div> 
+    
+    
+</body>
+
+<script>
+    //获取id绑定点击事件
+   /*  my$("way").onclick = function(){
+                            
+        
+        my$("up").style.display="block";
+    } */
+    //获取所有元素
+    var way =document.getElementsByClassName("way") ;
+    //遍历wayobjs
+    for(var i=0;i<way.length;i++){
+
+        way[i].index=i;
+        //绑定点击事件
+        way[i].onclick =function(){
+            //console.log(this.index);
+             my$("up").style.display="block";  
+        }
+    }
+
+
+
+</script>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的购物车</title>
+    <link rel="stylesheet" href="./css/购物车.css" type="text/css">
+</head>
+<body>
+    
+        <div class="header">
+        <div class="top">
+            <div class="sony">SONY</div>
+            <ul>
+                <li class="pt"><a href="#">商品分类</a></li>
+                <span class="spc">丨</span> 
+                <li class="pt"><a href="#">网站导航</a></li>
+                <li>
+                    <div class="ser">
+                    <div class="in">
+                        <input type="text" placeholder="鬼灭之刃">
+                    </div>
+                    <div class="fang"><img src="./img/btn_search_03.jpg"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="user">
+                       
+                            <img src="./img/silver_logo.png" style="margin-left: -120px;">
+                        
+                        <div class="xiao">
+                           小峰有话说
+                        </div>
+                    </div>
+                    
+                </li>
+                <li> 
+                    <div class="blue">
+                        <span>登出</span>
+                    </div>    
+                </li>
+                <span class="spc"><span>&nbsp;&nbsp;&nbsp;丨</span> 
+                <li class="pt"><a href="#">My Sony</a></li>
+                <span class="spc"><span>&nbsp;&nbsp;&nbsp;丨</span> 
+                <li class="pt"><a href="#">服务与支持</a></li>
+                <li>
+                    <div class="logo">
+                    <div class="guan">
+                        <img src="./img/guan_bai.png">
+                    </div>
+                    </div>
+                </li>
+                
+            </ul>
+            
+        </div>
+        </div>
+
+
+
+        <div class="My">
+        <div class="my">
+            <div class="bluetu">
+                <a href="#"><img src="./img/183843.png"></a>
+            </div>
+            <div class="Car">
+                <span>我的购物车</span>
+                <ul>
+                    <li class="current"><a href="#">1.我的购物车</a></li>
+                    <li class="tian"><a href="#">2.填写订单</a></li>
+                    <li class="wan"><a href="#">3.完成订单</a></li>
+                </ul>
+            </div>
+            <div class="free">
+                <span>订单免运费</span>
+                <div  class="no"><img src="./img/no.png"></div>
+            </div>
+            <div class="xian"></div>
+        </div>
+        </div>
+
+        <div class="tbox">
+        <div class="car">
+
+            <div class="car-top">
+                <li style="list-style: none;"><input type="button" class="all" style="width: 45px; height: 25px;  " value="全选"></li>
+        
+                <li class="car-top1">商品信息</li>
+                <li class="car-top2">单价</li>
+                <li class="car-top3">数量</li>
+                <li class="car-top4"> 小计</li>
+                </li class="car-top5"> 操作</li>
+            </div>
+            <table>
+                <div  class="shangping1">
+                    <li><input type="checkbox" name="" class="getGoods" ></li>
+        
+                    <li class="shangping1-a">
+                        <img src="./img/img_49x9500h_b1_800x800.jpg" alt="" style="width: 114px; height: 114px; margin-top: 50px; float: left;"> KD-49X9500H 49英寸 4K HDR 安卓智能液晶电视 黑色
+                    </li>
+                    <li class="price">6999</li>
+                    <li class="shangping1-c">
+                        <button class="jian">-</button>
+                        <span>1</span>
+                        <button class="add">+</button>
+                    </li>
+                    <li class="total">6999</li>
+                    <li class="shangping1-d">删除</li>
+                
+                </div>
+                <div class="shangping2">
+                    <li><input type="checkbox" name="" class="getGoods"></li>
+                
+                    <li class="shangping2-a"> <img src="./img/img_lspx_s2_w1_800.jpg" alt="" style="width: 114px; height: 114px; margin-top: 50px; float: left;"> LSPX-S2 晶雅音管</li>
+                    <li class="price">499</li>
+                    <li  class="shangping2-b">
+                        <button class="jian">-</button>
+                        <span>1</span>
+                        <button class="add">+</button>
+                    </li>
+                    <li class="total">499</li>
+                    <li class="shangping2-c">删除</li>
+                
+            </div>
+        
+            </table>
+            <div class="zongji">
+                <span style="display: inline-block; margin-left: 730px; width: 60px; height: 30px; margin-top: 10px;">总价：</span>
+                <span class="sum" style="color: crimson; font-family: '微软雅黑';">0</span>
+                <input  id="button" style="width: 150px; height: 50px ; background-color: skyblue;border: none ; float: right; " value=" 去结算" type="button">
+                   
+        
+                </input>
+            </div>
+        </div>
+        </div>
+
+
+    
+
+
+
+</body>
+
+
+<!--js-->
+<script type="text/javascript" src="./js/common.js"></script>
+<script src="./js/jquery-1.8.2.js"></script>
+<script type="text/javascript">
+getSum();
+
+	$(".add").click(function () {
+		//数量变化
+		let num = parseInt($(this).prev().text());
+		num++;
+		$(this).prev().text(num);
+		//小计的价格
+		let price = parseInt($(this).parent().prev().text());
+		$(this).parent().next().text(price * num);
+		getSum();
+
+	})
+
+	$(".jian").click(function () {
+		//算出数量变化
+		let num = parseInt($(this).next().text());
+		num--;
+		if (num < 1) {
+			num = 1;
+		}
+		$(this).next().text(num);
+		//小计的价格
+		let price = parseInt($(this).parent().prev().text());
+		$(this).parent().next().text(price * num);
+		getSum();
+
+
+	})
+
+	//总价的计算
+	function getSum() {
+		let sum = 0;
+		for (let i = 0; i < $(".total").length; i++) {
+            if($(".total").eq(i).parent().find("input").prop("checked")){
+                sum += parseInt($(".total").eq(i).text()); 
+            }
+
+
+			
+		}
+
+		$(".sum").text(sum);
+	}
+
+
+    //选中方式：js   checked  用户点击出现
+    $(".all").click(function(){
+        $(".getGoods").prop("checked",true);
+        getSum();
+    })
+  
+
+    $(".getGoods").click(function(){
+        //其实已经选中了
+        getSum();
+    })
+    
+
+    var  button =document.getElementById("button").onclick=function(){
+            let res=window.confirm("您确定要支付吗");
+          if(res){
+              location.href="./10秒返回.html"; 
+          }
+
+        }
+
+</script>
+
+</html>

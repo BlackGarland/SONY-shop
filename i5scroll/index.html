@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery无缝滚动插件</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .i35-wrap {
+            margin: 50px auto 0;
+            width: 360px;
+            vertical-align: top;
+            border: 1px solid rgb(219, 219, 219);
+            box-shadow: rgb(164, 160, 157) 1px 1px 9px -3px;
+            background-color: #F5F5F5;
+        }
+
+        .i35-title {
+            display: flex;
+            border-bottom: 2px solid rgb(99, 65, 165);
+            height: 60px;
+            line-height: 40px;
+        }
+
+        .i35-title li {
+            text-align: center;
+            flex: 1 1 1px;
+            cursor: pointer;
+            padding: 10px 30px;
+            color: rgb(51, 51, 51);
+        }
+
+        .i35-title li.active {
+            color: #fff;
+            background-color: rgb(99, 65, 165);
+        }
+
+        .i35-con {
+            padding: 20px;
+        }
+
+        .i35-con .content {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .i35-con .content li {
+            font-size: 12px;
+            height: 30px;
+            line-height: 30px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="i35-wrap">
+        <ul class="i35-title">
+            <li class="active">布丽吉塔</li>
+            <li>秩序之光</li>
+        </ul>
+        <div class="i35-con">
+            <div class="content" style="display: block;">
+                <ul class="scroll">
+                    <li>先帝创业未半而中道崩殂，今天下三分，益州疲弊</li>
+                    <li>此诚危急存亡之秋也，然侍卫之臣不懈于内</li>
+                    <li>忠志之士忘身于外者，盖追先帝之殊遇</li>
+                    <li>欲报之于陛下也~</li>
+                </ul>
+            </div>
+            <div class="content">
+                <ul class="scroll">
+                    <li>诚宜开张圣听，以光先帝遗德</li>
+                    <li>恢弘志士之气，不宜妄自菲薄</li>
+                    <li>引喻失义，以塞忠谏之路也</li>
+                    <li>宫中府中，俱为一体，陟罚臧否，不宜异同</li>
+                    <li>若有作奸犯科及为忠善者，宜付有司论其刑赏，以昭陛下平明之理，不宜偏私，使内外异法也。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+   <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="./js/i5scroll.js"></script>
+    <script>
+        $('.i35-title li').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.content').eq($(this).index()).show().siblings('.content').hide();
+        });
+
+        $(".scroll").i5Scroll();
+    </script>
+</body>
+
+</html>

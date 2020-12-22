@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery-1.8.2.js"></script>
+</head>
+<body>
+    
+</body>
+<script>
+function person(name,age){
+    this.name=name;
+    this.age=age;
+}
+person.prototype.say=function(){
+    console.log("我"+this.name+"今年"+this.age);
+}
+
+var p1=new person("张三","8")
+var p2=new person("张yi","9")
+console.log(p1.say);
+console.log(p2.say);
+// console.log("p1.say"=="p2.say");
+
+console.log(p1.prototype);
+
+
+</script>
+</html>

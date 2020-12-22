@@ -1,0 +1,2219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/js/css.css" />
+    <script src="/js/jquery-1.8.2.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/i5scroll/js/jquery.min.js"></script>
+    <script src="/i5scroll/js/i5scroll.min.js"></script>
+    <script src="/js/sliderx.js"></script>
+    <link rel="stylesheet" href="/css/sliderx.css">
+    <script src="/js/mainpage.js"></script>
+    <style>
+        div,
+        ul,
+        li,
+        p,
+        table,
+        tr,
+        rd,
+        dl,
+        dt,
+        input {
+            font-family: 微软雅黑, Arial;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #header {
+            /* position: absolute; */
+            /* top: 0px; */
+            width: auto;
+            height: 65px;
+            background-color: black;
+        }
+
+        #head_content {
+            width: 1210px;
+            height: 65px;
+            position: relative;
+            margin: 0 auto;
+            z-index: 99;
+        }
+
+        .sony-logo {
+            /* margin: 23px auto; */
+            /* display: inline-block; */
+            float: left;
+            /* height: 65px; */
+            /* line-height: 65px; */
+        }
+
+        .logotop {
+            /* width: 109px; */
+            padding-top: 23px;
+            display: block;
+            color: #fff;
+        }
+
+        #headerNavMain {
+            width: 585px;
+            height: 65px;
+            margin-left: 40px;
+            display: inline-block;
+        }
+
+        .topBottomNav {
+            float: left;
+        }
+
+        #toprightnav {
+            position: relative;
+            list-style: none;
+            height: 65px;
+            margin: 0px;
+
+        }
+
+        #toprightnav li {
+            float: left;
+            /* height: 65px; */
+            line-height: 65px;
+        }
+
+        #toprightnav li p {
+            margin: 0px;
+            /* line-height: 65px; */
+
+        }
+
+        .sony-logo {
+            margin-left: 25px;
+        }
+
+        .sony-logo img {
+            width: 6.25rem;
+            max-width: 100px;
+        }
+
+        #xialakuang {
+            position: absolute;
+            top: 65px;
+            left: 0;
+            border-bottom: 15px solid #fff;
+            width: 64.8px;
+            /* padding: 0px; */
+
+        }
+
+        #xialakuang li {
+            list-style: none;
+            display: block;
+
+            /* position: absolute; */
+            display: none;
+        }
+
+        #xialakuang li a {
+            position: relative;
+            font-size: 12px;
+            width: 112px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        #mysony p {
+            text-decoration: none;
+            color: white;
+        }
+
+        #mysony:hover {
+            background-color: white;
+
+
+        }
+
+        #mysony:hover p {
+            color: #10a0d5;
+            font-weight: bold;
+        }
+
+        #mysony:hover #xialakuang li {
+            display: block;
+            margin: 0px;
+
+        }
+
+        ul {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #mySonyWrap {
+            position: relative;
+            float: right;
+            width: 112px;
+            height: 65px;
+            margin-right: 110px;
+            text-align: center;
+        }
+
+        #mySonyWrap p {
+            margin: 0px;
+            line-height: 65px;
+        }
+
+        #mySonyWrap li {
+            list-style: none;
+
+        }
+
+        #mySonyWrap li a {
+            text-decoration: none;
+            border: 0 none;
+            outline: 0 none;
+            font-family: "微软雅黑", Arial;
+            position: relative;
+            font-size: 12px;
+            width: 112px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        #mySonyWrap a {
+            text-decoration: none;
+
+        }
+
+        .tit {
+            font-size: 14px;
+            color: #fff;
+            font-weight: bold;
+            line-height: 65px;
+            cursor: pointer;
+            /* background: url(images/dot_down_black.jpg) no-repeat 95px center; */
+            text-indent: -7px;
+        }
+
+        #mySonyWrap {
+            position: relative;
+            float: right;
+            width: 112px;
+            height: 65px;
+            margin-right: 110px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        #topRightNav li {
+            list-style: none;
+            padding: 0px;
+            /* background: url(images/nav_line.jpg) no-repeat right center; */
+        }
+
+        #topRightNav a:hover {
+            color: blue;
+        }
+
+        #topRightNav li a {
+            display: inline-block;
+            color: black;
+        }
+
+        .mySonyList {
+            display: none;
+            position: absolute;
+            top: 65px;
+            left: 0;
+            border-bottom: 15px solid #fff;
+        }
+
+        #mySonyWrap:hover p.tit {
+            color: #10a0d5;
+            font-weight: bold;
+            background-color: white;
+        }
+
+        #mySonyWrap:hover .mySonyList {
+            display: block;
+        }
+
+        .tbn {
+            width: 229px;
+            height: 25px;
+            border-radius: 10px;
+            background-color: white;
+            overflow: hidden;
+            margin: 21px 0 0 10px;
+
+        }
+
+        #input {
+            outline: none;
+            float: left;
+            /* position: relative; */
+            width: 180px;
+            height: 25px;
+            border-style: none;
+            margin-left: 5px;
+            /* left: -12px; */
+        }
+
+        #sear {
+            /* display: inline-block; */
+            width: 20px;
+            height: 18px;
+
+            float: left;
+
+            /* line-height: 25px; */
+            margin-top: 3.5px;
+        }
+
+        #myLoginWrap {
+            width: 90.8px;
+            height: 65px;
+            /* border-radius: 50%; */
+        }
+
+        #myLoginWrap {
+            font-family: 微软雅黑, Arial;
+            position: relative;
+            padding-right: 15px;
+            font-size: 14px;
+            color: #1fa8e2;
+            /* font-weight: bold; */
+            float: right;
+            line-height: 65px;
+            /* margin-right: 112px; */
+        }
+
+        #myLoginWrap a {
+            font-family: 微软雅黑, Arial;
+
+
+            font-size: 14px;
+            color: #1fa8e2;
+            font-weight: bold;
+        }
+
+        #guanwangWrap {
+            width: 48px;
+            height: 65px;
+            /* display: inline-block; */
+            /* position: absolute;
+    left: 0;
+    top: 0; */
+            background: url(/img/guan_bai.png) 13px 18.5px no-repeat;
+            float: right;
+        }
+
+        #shoppingButtonLink {
+            width: 48px;
+            height: 65px;
+            padding: 0px;
+
+
+
+
+            float: right;
+
+        }
+
+        #shoppingButtonLink:hover {
+            background-color: white;
+        }
+
+        #shoppingButtonLink:hover a {
+            /* background-color: white; */
+            background: url("/img/icon_shopping_1_hover.png") 13px 18.5px no-repeat;
+        }
+
+        #shoppingButtonLink a {
+            display: inline-block;
+            width: 45px;
+            height: 65px;
+
+            background: url("/img/icon_shopping_1.png") 13px 18.5px no-repeat;
+            /* background-size: 13px 18.5px; */
+            margin: 0px;
+        }
+
+        .shoppingCartArea {
+            /* top: 65px; */
+            width: 500px;
+            min-height: 62px;
+            padding: 0px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            margin: 0px;
+            position: absolute;
+            right: 48px;
+            top: 65px;
+            display: none;
+        }
+
+        #shoppingButtonLink:hover .shoppingCartArea {
+            display: block;
+        }
+
+        #btn {
+            width: 104px;
+            height: 36px;
+            color: rgb(221, 215, 215);
+            background-color: #0d9cd4;
+            float: right;
+            margin: 15px 20px;
+            border: none;
+            border-radius: 5px;
+
+
+
+        }
+
+        .shoppingCartArea span {
+            line-height: 62px;
+        }
+
+        #zongji {
+            margin-left: 15px;
+        }
+
+        #count {
+            color: #0d9cd4;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 720px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .swiper-wrapper {
+
+            width: auto;
+            height: 720px;
+            /* transform: translate(-4557.6px, 0px,); */
+            transition-duration: 0.8s;
+            /* overflow: hidden; */
+        }
+
+        .swiper-wrapper img {
+            display: none;
+        }
+
+        .swiper-wrapper li {
+            display: block;
+            /* width: 1523px; */
+            position: absolute;
+            left: -200.4px;
+            height: 720px;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        /* .swiper-wrapper img{
+    width: 1523px;
+    height: 720px;
+} */
+        .new-menu {
+            width: 1210px;
+            margin: 15px auto;
+            position: absolute;
+            top: 62px;
+            left: 130px;
+            width: 190px;
+            margin: 0 auto;
+            /* background-color: white; */
+            opacity: 0.8;
+        }
+
+        .new-menu li {
+            width: 150px;
+            height: 38px;
+            margin-left: 20px;
+            margin-right: 20px;
+            line-height: 38px;
+
+        }
+
+        .new-menu ul div {
+            background-color: white;
+            opacity: 0.9;
+            cursor: pointer;
+        }
+
+        .new-menu li img {
+            float: right;
+            margin-top: 11px;
+
+        }
+
+        .new-menu span {
+            color: black;
+            font-family: 微软雅黑, Arial;
+        }
+
+
+
+
+        .arrow-left {
+            background: url("/img/arrows_l.png") no-repeat 0 -82px;
+            position: absolute;
+            left: 370px;
+            top: 285px;
+            margin-top: -15px;
+            width: 38px;
+            cursor: pointer;
+            height: 66px;
+            z-index: 9;
+
+            opacity: 0.8;
+        }
+
+        .arrow-right {
+            background: url("/img/arrows_r.png") no-repeat 0 -82px;
+            position: absolute;
+            /* left: 240px; */
+            right: 185px;
+            top: 285px;
+            margin-top: -15px;
+            width: 38px;
+            cursor: pointer;
+            height: 66px;
+            z-index: 9;
+
+            opacity: 0.8;
+        }
+
+        .pagination {
+            position: absolute;
+            left: 0;
+            text-align: center;
+            bottom: 95px;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .pagination span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #cdccca;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+
+        #img01 {
+            display: block;
+        }
+
+        .switch1 {
+            background-color: #0d9cd4;
+        }
+
+        #statusbar {
+            position: relative;
+            left: 130px;
+            top: -36px;
+            width: 1270px;
+            height: 72px;
+
+            background-color: white;
+            border-bottom: 1px solid rgb(238, 238, 238);
+
+        }
+
+        .user {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .user img {
+            position: absolute;
+            top: -25px;
+            left: 20px;
+            width: 70px;
+            height: 72px;
+        }
+
+        .user .status-right {
+            padding-left: 115px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            /* width: 360px; */
+            height: 50px;
+        }
+
+        #login-info {
+            float: left;
+            width: 160px;
+            height: 20px;
+            margin: 0px 20px 10px 0px;
+        }
+
+        .status-right {
+            width: 360px;
+            height: 50px;
+            background-color: white;
+        }
+
+        .status-right a {
+            float: left;
+            display: block;
+            margin: 0px 20px 10px 0px;
+            text-decoration: none;
+        }
+
+        .status-right .a1 {
+            border-radius: 3px;
+            width: 68px;
+            height: 20px;
+            background-color: #fff;
+            border: 1px solid #ff6131;
+            color: r#ff6131ed;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+
+        }
+
+        .status-right .a12 {
+            border-radius: 3px;
+            width: 68px;
+            height: 20px;
+            background-color: #fff;
+            border: 1px solid #0a83d7;
+            color: #0a83d7;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+
+        }
+
+        .status-right .a2 {
+            border-radius: 3px;
+            width: 68px;
+            height: 20px;
+            background-color: #fff;
+            border: 1px solid #707070;
+            color: #707070;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+
+        }
+
+        .status-right .a1:hover {
+            background-color: #ff6131;
+            color: white;
+
+        }
+
+        .status-right .a12:hover {
+            background-color: #0a83d7;
+            color: white;
+
+        }
+
+        .status-right .a2:hover {
+            background-color: #707070;
+            color: white;
+            font-weight: 5000;
+
+        }
+
+        .status-right .a:hover {
+            font-weight: 2000;
+        }
+
+        .linkimg1 {
+            width: 70px;
+            height: 70px;
+            margin-right: 20px;
+            float: left;
+            background-image: url("/img/icon_bbs_on.jpg");
+
+        }
+
+        .linkimg2 {
+            width: 70px;
+            height: 70px;
+            margin-right: 20px;
+            float: left;
+            background-image: url("/img/icon_appcenter_on.jpg");
+
+        }
+
+        .linkimg3 {
+            width: 70px;
+            height: 70px;
+            margin-right: 20px;
+            float: left;
+            background-image: url("/img/icon_lives_on.jpg");
+
+        }
+
+        .linkimg4 {
+            width: 70px;
+            height: 70px;
+            margin-right: 20px;
+            float: left;
+            background-image: url("/img/icon_news_on.jpg");
+
+        }
+
+        .ulbox {
+            width: 375px;
+            height: 65px;
+            float: left;
+            overflow: hidden;
+            background-color: white;
+            font-size: 12px;
+        }
+
+        .ulbox li {
+
+            color: #707070;
+            height: 30px;
+            line-height: 12px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <script>
+            window.onload = roll(50);
+            window.onload = roll(50);
+
+function roll(t) {
+    var ul1 = document.getElementById("comment1");
+    var ul2 = document.getElementById("comment2");
+    var ulbox = document.getElementsByClassName("ulbox");
+    // ul2.innerHTML = ul1.innerHTML;
+    ulbox.scrollTop =0; // 开始无滚动时设为0
+    var timer = setInterval(rollStart, t); // 设置定时器，参数t用在这为间隔时间（单位毫秒），参数t越小，滚动速度越快
+    // 鼠标移入div时暂停滚动
+    ulbox.onmouseover = function () {
+        clearInterval(timer);
+    }
+    // 鼠标移出div后继续滚动
+    ulbox.onmouseout = function () {
+        timer = setInterval(rollStart, t);
+    }
+}
+
+// 开始滚动函数
+function rollStart() {
+    // 上面声明的DOM对象为局部对象需要再次声明
+    var ul1 = document.getElementById("comment1");
+    var ul2 = document.getElementById("comment2");
+    var ulbox = document.getElementsByClassName("ulbox");
+    // 正常滚动不断给scrollTop的值+1,当滚动高度大于列表内容高度时恢复为0
+    if (ulbox.scrollTop >= ul1.scrollHeight) {
+        ulbox.scrollTop =0;
+    } else {
+        ulbox.scrollTop++;
+    }
+}
+ 
+    </script> -->
+    <div id="topAnchor"></div>
+    <div id="header">
+        <div id="head_content">
+            <div class="sony-logo"><a href="/项目实战/html/索尼.html" class="logotop">
+                    <img src="https://www.sonystyle.com.cn/etc/designs/sonystyle/images/sony-logo.jpg" alt="">
+                </a></div>
+            <div id="headerNavMain">
+                <div class="topBottomNav">
+                    <ul>
+                        <li id="mySonyWrap" style="margin-right: 0px; float: left;">
+                            <a href="/项目实战/html/索尼.html" target="/项目实战/html/索尼.html">
+                                <p class="tit">My Sony</p>
+                            </a>
+                            <ul id="topRightNav" class="mySonyList" style="margin-right: 0px;">
+                                <li>
+                                    <a href="https://www.sonystyle.com.cn/mysony/bbs/web/" target="_blank">My Sony
+                                        社区</a></li>
+                                <li>
+                                    <a href="https://www.sonystyle.com.cn/sonyclub/member.html" target="_blank">我的账户</a>
+                                </li>
+                                <li><a href="https://www.sonystyle.com.cn/sonyclub/my_order.html"
+                                        target="_blank">我的订单</a></li>
+                                <li><a href="https://www.sonystyle.com.cn/sonyclub/wishlist.html"
+                                        target="_blank">我的心愿单</a></li>
+                                <li><a href="https://www.sonystyle.com.cn/sonyclub/product_reg/index.html"
+                                        target="_blank">产品注册</a></li>
+                                <li><a href="https://www.sonystyle.com.cn/sonyclub/benefits/Level_interest.html"
+                                        target="_blank">会员福利</a></li>
+                                <li><a href="https://www.sonystyle.com.cn/smallapp/acafe/index.htm?ssid=style_navi_2"
+                                        target="_blank">α Café</a></li>
+                            </ul>
+                        </li>
+
+                        <li id="mySonyWrap" style="margin-right: 0px; float: left;">
+                            <a href="https://www.sonystyle.com.cn/sonyclub/member.html"
+                                target="https://www.sonystyle.com.cn/sonyclub/member.html">
+                                <p class="tit">服务与支持</p>
+                            </a>
+                            <ul id="topRightNav" class="mySonyList" style="margin-right: 0px; ">
+                                <li>
+                                    <a href="https://www.sonystyle.com.cn/mysony/bbs/web/" target="_blank">服务与支持</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.sonystyle.com.cn/sonyclub/member.html" target="_blank">在线服务</a>
+                                </li>
+                                <li><a href="https://www.sonystyle.com.cn/sonyclub/my_order.html"
+                                        target="_blank">在线直播</a></li>
+                                <li><a href="https://www.sonystyle.com.cn/sonyclub/wishlist.html"
+                                        target="_blank">我的心愿单</a></li>
+                                <li><a href="https://www.sonystyle.com.cn/sonyclub/product_reg/index.html"
+                                        target="_blank">产品注册</a></li>
+                                <li><a href="https://www.sonystyle.com.cn/sonyclub/benefits/Level_interest.html"
+                                        target="_blank">会员福利</a></li>
+                                <li><a href="https://www.sonystyle.com.cn/smallapp/acafe/index.htm?ssid=style_navi_2"
+                                        target="_blank">α Café</a></li>
+                            </ul>
+                        </li>
+
+                        <li id="mySonyWrap" style="margin-right: 0px; float: left;">
+                            <a href="https://www.sonystyle.com.cn/sonyclub/member.html"
+                                target="https://www.sonystyle.com.cn/sonyclub/member.html">
+                                <p class="tit">网站导航</p>
+                            </a>
+
+                        </li>
+                        <li id="mySonyWrap">
+                            <div class="tbn">
+                                <input type="text" id="input" value="鬼灭之刃">
+                                <!-- <input type="button" value=""> -->
+                                <div></div>
+                                <a href="#" id="sear"></a>
+                                <img src="/img/btn_search_03.jpg" alt="" id="sear" style=" margin-top: 3.5px;">
+                            </div>
+                        </li>
+
+                        <li></li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <div id="guanwangWrap">
+                <a href="/项目实战/index.html"></a>
+            </div>
+
+            <div id="shoppingButtonLink">
+                <a href="/注册登录购物车/购物车界面/购物车.html"></a>
+            </div>
+            <div id="myLoginWrap">
+                <a href="/注册登录购物车/注册登录界面/登录界面.html">登录</a>/
+                <a href="/注册登录购物车/注册登录界面/注册界面.html">注册</a>
+            </div>
+            <div class="shoppingCartArea">
+                <span id="zongji">总计：RMB </span>
+                <span id="count">0.00</span>
+                <input type="button" value="去购物车（0）" id="btn">
+            </div>
+        </div>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <ul>
+                <li class="imgbox1"><img src="/img/kv_all_a_kimetsu2010.jpg" alt="" name="img" id="img01"></li>
+                <li class="imgbox2"><img src="/img/kv_201111.jpg" alt="" name="img"></li>
+                <li class="imgbox3"><img src="/img/kv_nw_zx300_table_2011.jpg" alt="" name="img"></li>
+            </ul>
+        </div>
+        <div class="new-menu">
+            <ul>
+                <div>
+                    <li><span>产品介绍</span><img src="/img/arrow_1.png" alt=""></li>
+                </div>
+                <div>
+                    <li><span>电视机/音箱</span><img src="/img/arrow_1.png" alt=""></li>
+                </div>
+                <div>
+                    <li><span>PlayStation®</span><img src="/img/arrow_1.png" alt=""></li>
+                </div>
+                <div>
+                    <li><span>微单™数码相机</span><img src="/img/arrow_1.png" alt=""></li>
+                </div>
+                <div>
+                    <li><span>镜头</span><img src="/img/arrow_1.png" alt=""></li>
+                </div>
+                <div>
+                    <li><span>数码相机</span><img src="/img/arrow_1.png" alt=""></li>
+                </div>
+                <div>
+                    <li><span>数码摄像机</span><img src="/img/arrow_1.png" alt=""></li>
+                </div>
+                <div>
+                    <li><span>手机</span><img src="/img/arrow_1.png" alt=""></li>
+                </div>
+                <div>
+                    <li><span>耳机</span><img src="/img/arrow_1.png" alt=""></li>
+                </div>
+                <div>
+                    <li><span>音乐播放器/扬声器</span><img src="/img/arrow_1.png" alt=""></li>
+                </div>
+                <div>
+                    <li><span>高解析音频设备</span><img src="/img/arrow_1.png" alt=""></li>
+                </div>
+                <div>
+                    <li><span>数码配件</span><img src="/img/arrow_1.png" alt=""></li>
+                </div>
+                <div>
+                    <li><span>潮玩科技</span><img src="/img/arrow_1.png" alt=""></li>
+                </div>
+            </ul>
+
+        </div>
+        <div class="arrow-left LR"></div>
+        <div class="arrow-right LR"></div>
+
+        <div class="pagination">
+            <span class="switch1 "></span>
+            <span class="switch2 "></span>
+            <span class="switch3 "></span>
+        </div>
+
+
+
+
+    </div>
+    <div id="statusbar">
+        <div class="user">
+            <div class="status-right">
+                <img src="/img/00.png" alt="">
+                <div id="login-info">
+                    您好！ 请&nbsp;&nbsp;
+                    <span>登录/注册</span>
+
+                </div>
+                <a href="#" class="a1">新人礼包</a>
+                <a href="#" class="a12">产品注册</a>
+                <a href="#" class="a2">我的账户</a>
+                <a href="#" class="a2">会员福利</a>
+                <a href="#" class="a2">我的订单</a>
+                <a href="#" class="a2">心愿单</a>
+
+
+            </div>
+
+
+
+        </div>
+        <a href="#" id="L!" class="linkimg1"></a>
+        <a href="#" id="L2" class="linkimg2"></a>
+        <a href="#" id="L3" class="linkimg3"></a>
+        <a href="#" id="L4" class="linkimg4"></a>
+
+        <div class="ulbox">
+
+            <ul id="comments1">
+                <li>2020.11.11 Imaging Edge Webcam 版本更新</li>
+                <li>2020.11.11 Imaging Edge Webcam 版本更新</li>
+                <li>2020.11.11 Imaging Edge Webcam 版本更新</li>
+                <li>2020.11.11 Imaging Edge Webcam 版本更新</li>
+                <li>2020.11.11 Imaging Edge Webcam 版本更新</li>
+            </ul>
+
+        </div>
+    </div>
+    </div>
+
+
+    <!--  -->
+    <div class="control-box">
+        <div class="text">
+            <h2> 最近活动</h2>
+        </div>
+
+        <ul>
+            <li class="prev">
+                <img src="/img/leftright-s.png" alt="prev">
+            </li>
+            <li class="next">
+                <img src="/img/leftright-s.png" alt="next" id="imgR">
+            </li>
+        </ul>
+        <div class="bigbox">
+            <div id="switcher">
+                <div class="content_1">
+                    <!-- <div class="box" style="background-image: url(/img/zxhd_xperia_yjhx201016.jpg);">
+                            
+                        </div> -->
+
+                    <div class="box" style="background-image: url(/img/zxhd_bbs_2009.jpg) ;">
+
+                    </div>
+                    <div class="box" style="background-image: url(/img/zxhd_xperia_video2010_193.jpg);">
+
+                    </div>
+
+                    <div class="box" style="background-image: url(/img/zxhd_xperia_yjhx201016.jpg);">
+
+                    </div>
+                    <!-- <div class="box" style="background-image: url(/img/zxhd_acafe_c2011.jpg);">
+                           
+                        </div> -->
+
+                </div>
+                <div class="content_2"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 主要页面 -->
+    <div class="mainpage">
+        <div class="text">
+            <h2> 新品发布</h2>
+        </div>
+
+    </div>
+
+
+    <div class="NewProduct_main">
+        <div class="mainbox">
+            <div class="scrollbox">
+                <div class="hiddenbox" id="hiddenbox1">
+                    <div class="NewProBlock" id="NewProBlock1">
+                        <div class="txtc">
+                            <h3>精巧随行 为速度而生<br>
+                                Xperia 5 II
+                            </h3>
+                            <p class="vice">
+                                口袋尺寸 轻巧便携
+                                <br>
+                                新品上市
+                            </p>
+                            <div class="member">
+                                RMB,5699
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="NewProBlock" id="NewProBlock2">
+                        <div class="txtc">
+                            <h3>精巧随行 为速度而生<br>
+                                Xperia 5 II
+                            </h3>
+                            <p class="vice">
+                                口袋尺寸 轻巧便携
+                                <br>
+                                新品上市
+                            </p>
+                            <div class="member">
+                                RMB,5699
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="NewProBlock" id="NewProBlock3">
+                        <div class="txtc">
+                            <h3>精巧随行 为速度而生<br>
+                                Xperia 5 II
+                            </h3>
+                            <p class="vice">
+                                口袋尺寸 轻巧便携
+                                <br>
+                                新品上市
+                            </p>
+                            <div class="member">
+                                RMB,5699
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="NewProBlock" id="NewProBlock4">
+                        <div class="txtc">
+                            <h3>精巧随行 为速度而生<br>
+                                Xperia 5 II
+                            </h3>
+                            <p class="vice">
+                                口袋尺寸 轻巧便携
+                                <br>
+                                新品上市
+                            </p>
+                            <div class="member">
+                                RMB,5699
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="hiddenbox2" id="hiddenbox2">
+                    <div class="NewProBlock" id="NewProBlock5">
+                        <div class="txtc">
+                            <h3>精巧随行 为速度而生<br>
+                                Xperia 5 II
+                            </h3>
+                            <p class="vice">
+                                口袋尺寸 轻巧便携
+                                <br>
+                                新品上市
+                            </p>
+                            <div class="member">
+                                RMB,5699
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="NewProBlock" id="NewProBlock6">
+                        <div class="txtc">
+                            <h3>精巧随行 为速度而生<br>
+                                Xperia 5 II
+                            </h3>
+                            <p class="vice">
+                                口袋尺寸 轻巧便携
+                                <br>
+                                新品上市
+                            </p>
+                            <div class="member">
+                                RMB,5699
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="NewProBlock" id="NewProBlock7">
+                        <div class="txtc">
+                            <h3>精巧随行 为速度而生<br>
+                                Xperia 5 II
+                            </h3>
+                            <p class="vice">
+                                口袋尺寸 轻巧便携
+                                <br>
+                                新品上市
+                            </p>
+                            <div class="member">
+                                RMB,5699
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="NewProBlock" id="NewProBlock8">
+                        <div class="txtc">
+                            <h3>精巧随行 为速度而生<br>
+                                Xperia 5 II
+                            </h3>
+                            <p class="vice">
+                                口袋尺寸 轻巧便携
+                                <br>
+                                新品上市
+                            </p>
+                            <div class="member">
+                                RMB,5699
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="pagination1">
+                <span class="switch4 "></span>
+                <span class="switch5 "></span>
+
+            </div>
+
+
+
+            <ul>
+                <li class="prev" id="prev1">
+                    <img src="/img/leftright-s.png" alt="prev">
+                </li>
+                <li class="next" id="next1">
+                    <img src="/img/leftright-s.png" alt="next" id="imgR">
+                </li>
+            </ul>
+
+        </div>
+
+
+
+    </div>
+    <div class="mainpage">
+        <div class="text">
+            <h2><img src="/img/blocktitlelogo_live.png" alt="" style="width: 30;height: 25; display: inline;"
+                    class="img002"> &nbsp; 在线直播</h2>
+        </div>
+
+    </div>
+    <div class="SecondBlockTitle">
+        <h5>直播日历&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;直播回顾</h5>
+    </div>
+    <div class="bigminbox">
+        <div class="zhibobox">
+            <div href="https://www.sonystyle.com.cn/activity/livestream/live.html?liveId=202011181901" target="_self"
+                class="slide-item">
+                <div class="price_zone1 price_zone multiprice"></div>
+                <div class="product_img0">
+                    <img alt="秋天记忆 - 本期推荐201118" title="秋天记忆" src="/img/block_onlive_201118.jpg" class="onlyimg lazy">
+
+                    <div class="hires_icon1"><img src="/img/onlive_40x40.png" alt="本期推荐 icon"></div>
+                </div>
+
+            </div>
+
+            <div class="phone">
+                <img src="/img/block_live_201016.jpg" alt="">
+                <img src="/img/historylive_40x40.png" alt="精彩回顾 icon" id="imgsmall">
+            </div>
+            <div class="gui">
+                <img src="/img/block_live_201031.jpg" alt="">
+                <img src="/img/historylive_40x40.png" alt="精彩回顾 icon" id="imgsmall">
+            </div>
+
+
+
+        </div>
+        <div class="MainBlockTop">
+            <h2><img src="/img/blocktitlelogo2.png" alt="" id="yinxiangicon">便携音频</h2>
+        </div>
+        <div class="h5box">
+            <h5 id="h5">高解析度音频设备&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                MP4/MP3 播放器&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                数码录音棒&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                耳机&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                无线扬声器&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                专业麦克风&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                应用软件&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                360 临场音效&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                Just ear&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                热门活动&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                音乐鉴赏</h5>
+        </div>
+        <div class="MainBlock">
+            <div class="imgbox011">
+                <img src="/img/blockb_wh_1000xm3_black1499.jpg" alt="" class="wh1000">
+                <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD"></div>
+            <div class="wh1000M4box">
+
+
+                <img src="/img/img_wh_1000xm4_b1_800.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                <div class="w1000tito">
+                    <h4> WH-1000XM4</h4>
+                    <p>索尼旗舰头戴式降噪耳机</p>
+                    <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                </div>
+                <p class="qian"><span>RMB</span> <span class="qbi">2800</span></p>
+            </div>
+            <div class="yinxiang">
+                <img src="/img/blockx_nw_a105_a_kimetsu.jpg" alt="">
+            </div>
+
+
+
+
+            <div class="wh1000M4box" style="position: relative;top: 10px;">
+
+
+                <img src="/img/img_wi_1000xm3_b1_800.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                <div class="w1000tito">
+                    <h4> WH-1000XM4</h4>
+                    <p>索尼旗舰头戴式降噪耳机</p>
+                    <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                </div>
+                <p class="qian"><span>RMB</span> <span class="qbi">2800</span></p>
+            </div>
+
+
+            <div class="xiaoerji">
+                <img src="/img/img_wf_sp800n_d2_800.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                <p class="miaosha"><span>免息</span>24期免息&nbsp;低至62.46/期</p>
+                <div class="w1000tito">
+                    <h4> WH-1000XM4</h4>
+                    <p>索尼旗舰头戴式降噪耳机</p>
+                    <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                </div>
+                <p class="qian"><span>RMB</span> <span class="qbi">2800</span></p>
+
+            </div>
+
+            <!-- 以下是第二块 -->
+            <div class="bigbox2">
+                <div class="imgbox011" style="float: right;">
+                    <img src="/img/blockb_wf_1000xm3_black_a_kimetsu.jpg" alt="" class="wh1000">
+                    <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD"></div>
+                <div class="wh1000M4box" style="float: right;">
+
+
+                    <img src="/img/img_ht_g700_b2_800.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                    <div class="w1000tito">
+                        <h4> HT-Z9F </h4>
+                        <p>沉浸式临场体验</p>
+                        <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">5999</span></p>
+                </div>
+                <!-- <div class="yinxiang"  style="float: right;">
+           <img src="/img/blockx_nw_a105_a_kimetsu.jpg" alt="">
+       </div>
+     -->
+
+
+
+                <div class="wh1000M4box" style="position: relative; float: right; ">
+
+
+                    <img src="/img/img_ht_g700_b2_800.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                    <div class="w1000tito">
+                        <h4> HT-G700</h4>
+                        <p>3.1声道环绕体验</p>
+                        <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">2800</span></p>
+                </div>
+                <div class="wh1000M4box" style="position: relative;top: 10px; float: right; ">
+
+
+                    <img src="/img/img_55a9g_b1logo.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                    <div class="w1000tito">
+                        <h4>A9G </h4>
+                        <p>声临新“视”代</p>
+                        <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">14999</span></p>
+                </div>
+
+                <div class="xiaoerji" style="float: right;">
+                    <img src="/img/img_55a9g_b1logo.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>免息</span>24期免息&nbsp;低至62.46/期</p>
+                    <div class="w1000tito">
+                        <h4>Ultra HD Blu-ray ™/DVD播放器</h4>
+                        <p>温馨氛围 出色音质</p>
+                        <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">2690</span></p>
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <!--  -->
+    </div>
+    <div class="yulebox">
+        <div class="yule">
+            <div class="zhuangjibibei">
+                <span id="biaoti">装机必备：</span>
+                <span id="fake">&nbsp;&nbsp;&nbsp;Music&nbsp;&nbsp;|&nbsp;&nbsp;
+                    CenterHeadphones&nbsp;&nbsp;|&nbsp;&nbsp;
+                    ConnectFiestable&nbsp;&nbsp;|&nbsp;&nbsp;索尼精选+Hi-Res&nbsp;&nbsp; |&nbsp;&nbsp;AudioSmart
+                    Key&nbsp;&nbsp;|&nbsp;&nbsp;Hi-Res Audio Recorder&nbsp;&nbsp;|&nbsp;&nbsp;HDD Audio
+                    Remote&nbsp;&nbsp;|&nbsp;&nbsp;REC Remote</span>
+
+            </div>
+            <!-- 播放器娱乐模块 -->
+            <div class="MainBlockTop">
+                <h2><img src="/img/blocktitlelogo3.png" alt="" id="yinxiangicon">影音娱乐</h2>
+            </div>
+            <div class="h5box">
+                <h5 id="h5">视频游戏机&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    BRAVIA电视机&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    家庭影音系统&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    4K/2K播放器&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    高保真音响组件&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    应用软件&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                </h5>
+            </div>
+            <div class="MainBlock1">
+                <div class="imgbox011">
+                    <img src="/img/bolckb_x9100h_purplebg.jpg" alt="" class="wh1000">
+                    <img src="/img/4khdr_40x40.png" alt="HI Res icon" class="HD"></div>
+                <div class="wh1000M4box">
+
+
+                    <img src="/img/img_x9000h_b0_800x800.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                    <div class="w1000tito">
+                        <h4> X9500H 系列</h4>
+                        <p>开辟感官新纪元</p>
+                        <img src="/img/4khdr_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">6999起</span></p>
+                </div>
+                <!-- <div class="yinxiang">
+               <img src="/img/img_75x8000h_b1_800x800.jpg.thumb.220.220.png" alt="">
+
+            
+
+           </div> -->
+                <div class="wh1000M4box">
+
+
+                    <img src="/img/img_75x8000h_b1_800x800.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                    <div class="w1000tito">
+                        <h4> X8000H 系列</h4>
+                        <p>臻享视听</p>
+                        <img src="/img/4khdr_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">4499</span></p>
+                </div>
+
+
+
+                <div class="wh1000M4box" style="position: relative;top: 10px;">
+
+
+                    <img src="/img/img_a8h_b1logo_800x800.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                    <div class="w1000tito">
+                        <h4> A8H</h4>
+                        <p>聆醇音 享佳境</p>
+                        <img src="/img/4khdr_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">11999起</span></p>
+                </div>
+
+
+                <div class="xiaoerji">
+                    <img src="/img/img_x9000h_b0_800x800.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>免息</span>24期免息&nbsp;低至62.46/期</p>
+                    <div class="w1000tito">
+                        <h4>X9000H 系列</h4>
+                        <p>游戏人生 大有可为</p>
+                        <img src="/img/4khdr_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">5499起</span></p>
+
+                </div>
+
+                <!-- 以下是第二块 -->
+                <div class="bigbox2">
+                    <div class="imgbox012">
+                        <!-- <img src="/img/blockb_wf_1000xm3_black_a_kimetsu.jpg" alt="" class="wh1000">
+                <img src="/img/4khdr_40x40.png" alt="HI Res icon" class="HD"></div> -->
+                        <div class="wh1000M4box" style="position: relative; top: 10px; ">
+
+
+                            <img src="/img/img_nw_wm1a_b_0.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                            <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                            <div class="w1000tito">
+                                <h4> NW-WM1A </h4>
+                                <p>高解析度音乐播放器</p>
+                                <img src="/img/4khdr_40x40.png" alt="HI Res icon" class="HD">
+                            </div>
+                            <p class="qian"><span>RMB</span> <span class="qbi">8999</span></p>
+                        </div>
+                        <!-- <div class="yinxiang"  style="float: right;">
+                   <img src="/img/blockx_nw_a105_a_kimetsu.jpg" alt="">
+               </div>
+             -->
+
+
+
+                        <div class="wh1000M4box" style="position: relative; top: 10px; ">
+
+
+                            <img src="/img/img_nw_zx500_b2_800.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                            <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                            <div class="w1000tito">
+                                <h4> WH-1000XM4</h4>
+                                <p>索尼旗舰头戴式降噪耳机</p>
+                                <img src="/img/4khdr_40x40.png" alt="HI Res icon" class="HD">
+                            </div>
+                            <p class="qian"><span>RMB</span> <span class="qbi">2800</span></p>
+                        </div>
+                        <div class="wh1000M4box" style="position: relative; top: 10px; ">
+
+
+                            <img src="/img/img_55a9g_b1logo.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                            <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                            <div class="w1000tito">
+                                <h4> WH-1000XM4</h4>
+                                <p>索尼旗舰头戴式降噪耳机</p>
+                                <img src="/img/4khdr_40x40.png" alt="HI Res icon" class="HD">
+                            </div>
+                            <p class="qian"><span>RMB</span> <span class="qbi">2800</span></p>
+                        </div>
+
+                        <div class="xiaoerji">
+                            <img src="/img/img_lspx_s2_w1_800.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                            <p class="miaosha"><span>免息</span>24期免息&nbsp;低至62.46/期</p>
+                            <div class="w1000tito">
+                                <h4> LSPX-S2</h4>
+                                <p>温馨氛围 出色音质</p>
+                                <img src="/img/4khdr_40x40.png" alt="HI Res icon" class="HD">
+                            </div>
+                            <p class="qian"><span>RMB</span> <span class="qbi">3500</span></p>
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="zhuangjibibei" style="position: absolute; bottom: 0px;">
+                    <span id="biaoti">装机必备：</span>
+                    <span id="fake">&nbsp;&nbsp;&nbsp; TV SideView&nbsp;&nbsp;</span>
+
+                </div>
+
+            </div>
+
+            <div class="MainBlockTop">
+                <h2><img src="/img/blocktitlelogo3.png" alt="" id="yinxiangicon">数码影像</h2>
+            </div>
+            <div class="h5box">
+                <h5 id="h5">微单™/单电数码相机&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    镜头&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    数码相机&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    数码摄像机&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    运动相机&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    配件&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    应用软件&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    线下体验&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    PRO Support影像专业服务&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    微摄会 α Universe&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                </h5>
+            </div>
+            <!-- 数码影像块 -->
+            <div class="MainBlock3">
+                <div class="imgbox011">
+                    <img src="/img/blockb_di_a_kimetsu.jpg" alt="" class="wh1000">
+                    <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD"></div>
+                <div class="wh1000M4box">
+
+
+                    <img src="/img/img_a7rm4_b.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                    <div class="w1000tito">
+                        <h4> WH-1000XM4</h4>
+                        <p>索尼旗舰头戴式降噪耳机</p>
+                        <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">2800</span></p>
+                </div>
+                <!-- <div class="yinxiang">
+               <img src="/img/ilce_7c_s_01.jpg.thumb.220.220.png" alt="">
+
+
+           </div> -->
+                <div class="wh1000M4box" id="sp">
+
+                    <a href="/商品页面/商品页面.html" style="text-decoration: none ; color: black;">
+                        <img src="/img/ilce_7c_s_01.jpg.thumb.220.220.png" alt="" class="wh1000M4" id="sp">
+                        <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                        <div class="w1000tito">
+                            <h4> PH-1000XM4</h4>
+                            <p>索尼相机</p>
+                            <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                        </div>
+                        <p class="qian"><span>RMB</span> <span class="qbi">2800</span></p>
+                    </a>
+
+                </div>
+
+
+
+                <div class="wh1000M4box" style="position: relative;top: 10px;">
+
+
+                    <img src="/img/img_sel1224gm_b_01.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                    <div class="w1000tito">
+                        <h4> WH-1000XM4</h4>
+                        <p>索尼旗舰头戴式降噪耳机</p>
+                        <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">2800</span></p>
+                </div>
+
+
+                <div class="xiaoerji">
+                    <img src="/img/img_sel85f14gm_b.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>免息</span>24期免息&nbsp;低至62.46/期</p>
+                    <div class="w1000tito">
+                        <h4> WH-1000XM4</h4>
+                        <p>索尼旗舰头戴式降噪耳机</p>
+                        <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">2800</span></p>
+
+                </div>
+
+                <!-- 以下是第二块 -->
+                <div class="bigbox2">
+                    <div class="imgbox011" style="float: right;">
+                        <img src="/img/blockb_zv_1_201111cx.jpg" alt="" class="wh1000">
+                        <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD"></div>
+                    <div class="wh1000M4box" style="float: right;">
+
+
+                        <img src="/img/img_dsc_rx100m7_b_1.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                        <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                        <div class="w1000tito">
+                            <h4> HT-Z9F </h4>
+                            <p>沉浸式临场体验</p>
+                            <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                        </div>
+                        <p class="qian"><span>RMB</span> <span class="qbi">8,099</span></p>
+                    </div>
+                    <!-- <div class="yinxiang"  style="float: right;">
+                   <img src="/img/blockx_nw_a105_a_kimetsu.jpg" alt="">
+               </div>
+             -->
+
+
+
+                    <div class="wh1000M4box" style="position: relative; float: right; ">
+
+
+                        <img src="/img/img_dsc_rx100m5a_b_2.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                        <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                        <div class="w1000tito">
+                            <h4> HT-G700</h4>
+                            <p>3.1声道环绕体验</p>
+                            <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                        </div>
+                        <p class="qian"><span>RMB</span> <span class="qbi">5,399</span></p>
+                    </div>
+                    <div class="wh1000M4box" style="position: relative;top: 10px; float: right; ">
+
+
+                        <img src="/img/img_dsc_rx0m2g_b_6.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                        <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                        <div class="w1000tito">
+                            <h4>A9G </h4>
+                            <p>声临新“视”代</p>
+                            <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                        </div>
+                        <p class="qian"><span>RMB</span> <span class="qbi">4,299</span></p>
+                    </div>
+
+                    <div class="xiaoerji" style="float: right;">
+                        <img src="/img/img_fdr_ax700_b_2.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                        <p class="miaosha"><span>免息</span>24期免息&nbsp;低至62.46/期</p>
+                        <div class="w1000tito">
+                            <h4>Ultra HD Blu-ray ™/DVD播放器</h4>
+                            <p>温馨氛围 出色音质</p>
+                            <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                        </div>
+                        <p class="qian"><span>RMB</span> <span class="qbi">12,699</span></p>
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div class="zhuangjibibei">
+                    <span id="biaoti">装机必备：</span>
+                    <span id="fake">&nbsp;&nbsp;&nbsp;Music&nbsp;&nbsp;|&nbsp;&nbsp;
+                        CenterHeadphones&nbsp;&nbsp;|&nbsp;&nbsp;
+                        ConnectFiestable&nbsp;&nbsp;|&nbsp;&nbsp;索尼精选+Hi-Res&nbsp;&nbsp; |&nbsp;&nbsp;AudioSmart
+                        Key&nbsp;&nbsp;|&nbsp;&nbsp;Hi-Res Audio Recorder&nbsp;&nbsp;|&nbsp;&nbsp;HDD Audio
+                        Remote&nbsp;&nbsp;|&nbsp;&nbsp;REC Remote</span>
+
+                </div>
+
+
+
+
+            </div>
+
+            <div class="MainBlockTop">
+                <h2><img src="/img/znyj_36x36.png" alt="" id="yinxiangicon">潮玩科技</h2>
+            </div>
+            <div class="h5box">
+                <h5 id="h5">智能设备/手机&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    智能手机配件&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    KOOV™教育机器人&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    应用软件&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            </div>
+
+
+            <!-- 潮玩科技块 -->
+            <div class="bigbox2">
+                <div class="imgbox011" style="float: right;">
+                    <img src="/img/blockb_xperia1ii_2011cx.jpg" alt="" class="wh1000">
+                    <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD"></div>
+                <div class="wh1000M4box" style="float: right;">
+
+
+                    <img src="/img/img_koov_haohua_1.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                    <div class="w1000tito">
+                        <h4> HT-Z9F </h4>
+                        <p>沉浸式临场体验</p>
+                        <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">8,099</span></p>
+                </div>
+                <!-- <div class="yinxiang"  style="float: right;">
+                       <img src="/img/blockx_nw_a105_a_kimetsu.jpg" alt="">
+                   </div>
+                 -->
+
+
+
+                <div class="wh1000M4box" style="position: relative; float: right; ">
+
+
+                    <img src="/img/img_scvj10_b.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                    <div class="w1000tito">
+                        <h4> HT-G700</h4>
+                        <p>3.1声道环绕体验</p>
+                        <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">5,399</span></p>
+                </div>
+                <div class="wh1000M4box" style="position: relative;top: 10px; float: right; ">
+
+
+                    <img src="/img/img_dsc_rx0m2g_b_6.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>秒杀</span>&nbsp;&nbsp;&nbsp; 最高可享24期免息</p>
+                    <div class="w1000tito">
+                        <h4>A9G </h4>
+                        <p>声临新“视”代</p>
+                        <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">4,299</span></p>
+                </div>
+
+                <div class="xiaoerji" style="float: right;">
+                    <img src="/img/img_fdr_ax700_b_2.jpg.thumb.220.220.png" alt="" class="wh1000M4">
+                    <p class="miaosha"><span>免息</span>24期免息&nbsp;低至62.46/期</p>
+                    <div class="w1000tito">
+                        <h4>Ultra HD Blu-ray ™/DVD播放器</h4>
+                        <p>温馨氛围 出色音质</p>
+                        <img src="/img/hires_40x40.png" alt="HI Res icon" class="HD">
+                    </div>
+                    <p class="qian"><span>RMB</span> <span class="qbi">12,699</span></p>
+
+                </div>
+
+
+
+
+
+
+            </div>
+            <div class="zhuangjibibei">
+                <span id="biaoti">装机必备：</span>
+                <span id="fake">&nbsp;&nbsp;&nbsp;KOOV™应用程序&nbsp;&nbsp;|&nbsp;&nbsp;
+                    CenterHeadphones&nbsp;&nbsp;|&nbsp;&nbsp;
+                    ConnectFiestable&nbsp;&nbsp;|&nbsp;&nbsp;索尼精选+Hi-Res&nbsp;&nbsp; |&nbsp;&nbsp;AudioSmart
+                    Key&nbsp;&nbsp;|&nbsp;&nbsp;Hi-Res Audio Recorder&nbsp;&nbsp;|&nbsp;&nbsp;HDD Audio
+                    Remote&nbsp;&nbsp;|&nbsp;&nbsp;FES Closet</span>
+
+            </div></div>
+            <div class="VIPBOX">
+                <div class="MainBlockTop" style="color: white;  font-weight: normal">
+                    <h2><img src="/img/blocktitlelogo4.png" alt="" id="yinxiangicon" style="background: #0a83d6;">&nbsp;My Sony Club会员专区</h2>
+                </div>
+                <div class="h5box05"  >
+                    <h5 id="h51" >我的索尼&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                        最新动态&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                        产品注册&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                        α café 社区&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                </div>
+                <div class="VIPmain">
+                    <div class="VIPmainbox1">
+                    <div class="product_img0">
+               <img src="/img/block_alphapho_2007_600345.jpg" alt="">         
+                    </div>
+                    <div class="product_img1">
+                        <img src="img/blockx_pro_reg_201105.jpg" alt="">
+                    </div>
+                    <div class="product_img2">
+                        <img src="/img/block_hyfl_295345.jpg" alt="">
+                    </div>
+                    <div class="product_img1">
+                        <img src="img/block_snyx_295345.jpg" alt="">
+                    </div>
+                    <div class="product_img2">
+                        <img src="/img/blockx_acafe_c2011.jpg" alt="">
+                    </div>
+            </div>
+            <div class="VIPmainbox2">
+                <div class="product_img3">
+                    <img src="/img/block_bbs2005_600700.jpg" alt="">
+
+                </div>
+                <div class="product_img1">
+                    <img src="img/block_xxsykt_295345.jpg" alt="">
+                </div>
+                <div class="product_img2">
+                    <img src="/img/block_lens_yb_295345.jpg" alt="">
+                </div>
+
+
+            </div>
+                    <a href="#topAnchor" class="backTohead">
+                        <img src="/img/backtohead.png" alt="">
+                    </a>
+                </div>
+            </div>
+         <div class="BottomMain">
+             <div class="BottomMainblock1">
+                <div class="BottomMainblock1_img1">
+                    <div class="left_iconred">
+                        微摄会 α Universe
+                    </div>
+                    <img src="/img/block_wsh_2011.jpg" alt="带上索尼Alpha 7R IV拍摄90年代风街机厅少女人像">
+                    <div class="Ctxt">
+                    <h4>FE 85mm F1.4 GM</h4>
+                    <p class="jianj">带上索尼镜头拍摄夜景人像</p>
+                </div>
+                </div>
+                <div class="BottomMainblock1_img1">
+                    <div class="left_iconred" style="background-color: #0A83D7;">
+                        设计启示录
+                    </div>
+                    <img src="/img/block_sjqsl_2003.jpg" alt="带上索尼Alpha 7R IV拍摄90年代风街机厅少女人像">
+                    <div class="Ctxt">
+                        <h4>醇音系列</h4>
+                        <p class="jianj">DMP-Z1和IER-Z1R</p>
+                    </div>
+                </div><div class="BottomMainblock1_img1" style="margin-right: 0px; ">
+                    <div class="left_iconred" style="background-color: #FF6131;">
+                        在线直播
+                    </div>
+                    <img src="/img/block_livestream_2004.jpg" alt="带上索尼Alpha 7R IV拍摄90年代风街机厅少女人像">
+                    <div class="Ctxt">
+                        <h4>索尼在线直播平台</h4>
+                        <p class="jianj">零距离与你分享</p>
+                    </div>
+                </div>
+             </div>
+
+               <div class="bottomblock2">
+             <h2 class="bottomblock2title">关注我们</h2>
+             <div class="bottomimgbox">
+             <div class="bottomimg">
+                 <img src="/img/bottom_share1.jpg" alt="">
+                 <p>索尼中国</p>
+                 <p>官方微信账号</p>
+             </div>
+             <div class="bottomimg">
+             <img src="/img/sony_china_app.jpg" alt="">
+             <p>索尼中国APP</p>
+             <a href="#">点击查看</a>
+            </div>
+            <div class="bottomimg">
+             <img src="/img/bottom_share2.png" alt="">
+             <p>索尼官方频道</p>
+             <a href="#">点击查看</a>
+         </div>
+</div></div>
+         </div>   
+       
+            <!-- <div class="footer-box">
+    <div class="w1210">
+		<div class="footer_reason">
+			<ul>
+				<li class="reason1">
+					<a href="https://www.sonystyle.com.cn/activity/8reasons/index.html?item=01" target="_blank">
+						正品保障
+					</a>
+				</li>
+				<li class="reason2">
+					<a href="https://www.sonystyle.com.cn/activity/8reasons/index.html?item=02" target="_blank">
+						专业售前
+					</a>
+				</li>
+				<li class="reason3">
+					<a href="https://www.sonystyle.com.cn/activity/8reasons/index.html?item=03" target="_blank">
+						便捷配送
+					</a>
+				</li>
+				<li class="reason4">
+					<a href="https://www.sonystyle.com.cn/activity/8reasons/index.html?item=04" target="_blank">
+						无忧退换
+					</a>
+				</li>
+				<li class="reason5">
+					<a href="https://www.sonystyle.com.cn/activity/8reasons/index.html?item=05" target="_blank">
+						优质售后
+					</a>
+				</li>
+				<li class="reason6">
+					<a href="https://www.sonystyle.com.cn/activity/8reasons/index.html?item=06" target="_blank">
+						一站购物
+					</a>
+				</li>
+				<li class="reason7">
+					<a href="https://www.sonystyle.com.cn/activity/8reasons/index.html?item=07" target="_blank">
+						会员尊享
+					</a>
+				</li>
+				<li class="reason8">
+					<a href="https://www.sonystyle.com.cn/activity/8reasons/index.html?item=08" target="_blank">
+						增值服务
+					</a>
+				</li>
+			</ul>
+		</div>
+        <div class="footer-top clearfix">
+            <div class="footer-tit fl">
+				<a class="nearby" href="https://www.sonystyle.com.cn/dealerweb/index.htm" style="margin-top: 0px;">Sony Store 直营店</a>
+                <p class="nearby">你周围的经销商</p>
+                <a class="nearby-query" style="margin-bottom:15px;" href="https://www.sonystyle.com.cn/dealerweb/index.htm">就近门店查询</a><br>
+                <a class="nearby-query" href="https://www.sonystyle.com.cn/dealerweb/index.htm#p=2">就近维修站查询</a>
+            </div>
+            <div class="footer-about fl">
+                <p>关注我们</p>
+                <div class="wx-wrap">
+                    <div class="wx-box">
+                        <a class="wx-btn" href="https://e.weibo.com/sonychina" rel="nofollow">索尼（中国）官方微博</a>
+                    </div>
+                    <div class="wx-box">
+                        <a class="wx-btn" href="https://www.sonystyle.com.cn/wechat/index.htm" rel="nofollow">索尼（中国）官方微信</a>
+                    </div>
+                </div>
+                <a class="phone-client icon-tel" href="https://www.sonystyle.com.cn/app/index.htm">手机客户端</a>
+                <a class="icon-tel" href="https://www.sonystyle.com.cn/announcement/sonychat/index.htm">在线服务</a>
+            </div>
+            <ul class="server-support fl clearfix">
+                <li>
+                    <p>如何订购</p>
+                    <ul class="support-list">
+                        <li><a target="_blank" href="https://www.sonystyle.com.cn/onlineshop/about/shopping.html">在线订购指南</a></li>
+                        <li><a target="_blank" href="https://www.sonystyle.com.cn/onlineshop/about/sales_policy.html">销售条款</a></li>
+                        <li><a target="_blank" href="https://www.sonystyle.com.cn/onlineshop/about/online_payment.html">付款方式</a></li>
+                        <li><a target="_blank" href="https://www.sonystyle.com.cn/onlineshop/about/delivery_1.html">货物配送</a></li>
+                    	<li><a target="_blank" href="https://www.sonystyle.com.cn/onlineshop/about/delivery_2.html">收货流程</a></li>
+                    	<li><a target="_blank" href="https://www.sonystyle.com.cn/onlineshop/about/return_normal.html">退货流程</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p>会员天地</p>
+                    <ul class="support-list">
+                        <li><a target="_blank" href="/content/sonyclub/index.html">我的索尼</a></li>
+                        <li><a target="_blank" href="/content/sonyclub/index.html">最新动态</a></li>
+                        <li><a target="_blank" href="/content/sonyclub/product_reg/index.html">产品注册</a></li>
+                        <li><a target="_blank" href="https://www.sonystyle.com.cn/smallapp/acafe/lecture.htm">My Sony学院</a></li>
+                        <li><a target="_blank" href="https://www.sonystyle.com.cn/sonyclub/pro_reg/workflow/guide_all.htm">会员权益</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p>服务与支持</p>
+                    <ul class="support-list">
+                        <li><a target="_blank" href="http://service.sony.com.cn/index.htm">产品说明书</a></li>
+                        <li><a target="_blank" href="http://service.sony.com.cn/Home_Search.htm">驱动程序检索</a></li>
+                        <li><a target="_blank" href="http://service.sony.com.cn/faqSearch.htm">常见问题</a></li>
+                        <li><a target="_blank" href="http://service.sony.com.cn/Maintenance_Station/2294.htm">保修条款</a></li>
+                        <li><a target="_blank" href="http://service.sony.com.cn/Maintenance_Station/2518.htm">维修网络查询</a></li>
+                        <li><a target="_blank" href="http://servicenetwork.sonymobile.com/">索尼手机客户服务</a></li>
+                        <li><a target="_blank" href="http://service.sony.com.cn/NewsandNotice.htm">服务动态</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p>相关链接</p>
+                    <ul class="support-list">
+                        <li><a href="https://www.sonystyle.com.cn/activity/livestream/index.html">在线直播</a></li>
+                        <li><a href="https://www.sonystyle.com.cn/products/app/index.htm">应用中心</a></li>
+                        <li><a href="https://www.sonystyle.com.cn/products/video/index.htm">视频教程中心</a></li>
+                        <li><a href="https://www.sonystyle.com.cn/b2b/index.htm">行业解决方案</a></li>
+                        <li><a href="http://www.sony.com.cn/newscenter.htm">新闻中心</a></li>
+                        <li><a href="https://www.sonystyle.com.cn/products/anti_fake/index.htm">影像产品正品认证</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-btm">
+            <div class="copy-top clearfix">
+                <a href="http://www.sony.com.cn/index.htm">索尼中国首页</a>
+                <a href="http://www.sony.com.cn/products/contactus.htm">联系我们</a>
+                <a href="http://www.sony.com.cn/products/shengming.htm" rel="nofollow">责任声明</a>
+                <a href="https://www.sonystyle.com.cn/onlineshop/about/license.html" rel="nofollow">营业执照</a>
+                <a href="https://www.sony.com.cn/privacy/terms.html" rel="nofollow">索尼隐私政策</a>
+                <span class="fr">2020索尼（中国）有限公司 版权所有</span>
+            </div>
+            <div class="ft-copy-btm clearfix">
+                <span>本网站包含推销产品或服务的广告</span>
+                <span><a href="http://beian.miit.gov.cn" target="_blank">京ICP备05036958号</a></span>
+
+                    <span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502031585" target="blank" class="copy-icon" rel="nofollow">京公网安备 11010502031585号</a></span>
+                    <span style="margin-left:27px"><a href="https://search.szfw.org/cert/l/CX20120917001680001707" target="blank" rel="nofollow"> 诚信网站认证 </a></span>
+
+                <span class="fr">您访问本网站将会被监控，请点击<a id="goDeclare" href="javascript:;">此处</a>获得详细信息 </span>
+            </div>
+        </div>
+    </div>
+
+
+</div> -->
+</body>
+<script>
+    $("#comments1").i5Scroll();
+</script>
+<script>
+    // var obj=document.getElementsByName("img")
+    // var num=0
+    // my$(".arrow-right").onclick=function(){
+    //     num ++
+
+    // }
+    // $(document).ready(function(){
+    //     $(".switch1").css("backgroundColor"," #0d9cd4")
+    //         })
+
+    // my$(".status-right a").onmouseover=function(){
+    //     var a=this.style.color
+    //     this.style.backgroundColor=a
+    // }
+
+
+
+
+
+
+    var p = 0
+
+    $(function () {
+
+
+
+
+        $("#shoppingButtonLink").mouseover(function () {
+            $(".shoppingCartArea").css("display", "block")
+
+        }).mouseleave(function () {
+            $(".shoppingCartArea").css("display", "none")
+        })
+        $(".new-menu ul div").mouseover(function () {
+            $(this).find("span").css("color", "white").prevAll().css("Color", "")
+            $(this).css({ "backgroundColor": "#1fa8e2", "opacity": 1 }).prevAll().css({ "backgroundColor": "white", "opacity": 0.9 })
+        }).mouseleave(function () {
+            $(this).css({ "backgroundColor": "white", "opacity": 0.9 });
+            $(this).find('span').css("color", "");
+        })
+        $(".LR").mouseover(function () {
+            $(this).css("opacity", 1)
+        }).mouseleave(function () {
+            $(this).css("opacity", 0.8)
+        })
+        $(".switch1").click(function () {
+            // $(".imgbox1 img").prevAll()().fadeOut();
+            $(".imgbox3 img").fadeOut()
+            $(".imgbox2 img").fadeOut()
+            $(this).css("backgroundColor", " #0d9cd4").siblings().css("backgroundColor", "  #cdccca")
+            // $(".imgbox1").css("opacity","1").prevAll().css("opacity","0")
+            $(".imgbox1 img").fadeIn(200).siblings().fadeOut(100);
+            p = 0
+        })
+        $(".switch2").click(function () {
+            // $(".imgbox2 img").siblings().css("display","none")
+            $(".imgbox1 img").fadeOut()
+            $(".imgbox3 img").fadeOut()
+
+            $(this).css("backgroundColor", " #0d9cd4").siblings().css("backgroundColor", "  #cdccca")
+            // $(".imgbox1").css("opacity","1").prevAll().css("opacity","0")
+            $(".imgbox2 img").fadeIn(200).siblings().fadeOut(100);
+            p = 1
+        })
+        $(".switch3").click(function () {
+            // $(".imgbox3 img").siblings().css("display","none")
+            $(".imgbox1 img").fadeOut()
+            $(".imgbox2 img").fadeOut()
+            $(this).css("backgroundColor", " #0d9cd4").siblings().css("backgroundColor", "  #cdccca")
+            // $(".imgbox1").css("opacity","1").prevAll().css("opacity","0")
+            $(".imgbox3 img").fadeIn(200).siblings().fadeOut(100);
+            p = 2
+            console.log(p);
+        })
+
+
+
+
+        $(".arrow-right").click(function () {
+            if (p == 0) {
+                // document.getElementsByClassName(".switch2").click()
+                $(".switch2").click()
+            }
+            else if (p == 1) {
+                // document.getElementsByClassName(".switch2").click()
+                $(".switch3").click()
+            }
+            else if (p == 2) {
+                // document.getElementsByClassName(".switch2").click()
+                $(".switch1").click()
+            }
+
+        })
+
+        $(".arrow-left").click(function () {
+            if (p == 0) {
+                // document.getElementsByClassName(".switch2").click()
+                $(".switch3").click()
+            }
+            else if (p == 1) {
+                // document.getElementsByClassName(".switch2").click()
+                $(".switch1").click()
+            }
+            else if (p == 2) {
+                // document.getElementsByClassName(".switch2").click()
+                $(".switch2").click()
+            }
+        })
+
+
+
+        //    以下为第三个轮播图的js代码
+
+        $("#prev1").click(function () {
+
+            //  $(".scrollbox").css(
+            //     "transform","translateX(-1210px)"
+            //  )
+            $(".scrollbox").animate({ right: 160 })
+            $(this).fadeOut(100);
+            $("#next1").css("display", "block")
+            $(".switch4 ").css("backgroundColor", "  #0a83d6")
+            $("switch5").css("backgroundColor", "")
+
+
+        })
+        $("#next1").click(function () {
+            //  $(".scrollbox").css(
+            //     "transform","translateX(-1210px)"
+            //  )
+            $(".scrollbox").animate({ left: 0 })
+            $(this).fadeOut(100);
+            $("#prev1").css("display", "block")
+            $(".switch5 ").css("backgroundColor", "  #0a83d6")
+            $("switch4").css("backgroundColor", "")
+
+        })
+        //  if($(".scrollbox").css("left")=='0px'){
+        //         //  $(".scrollbox").stop(true)
+        //         $(".scrollbox")({right:""})
+        //         $(".scrollbox")({left:""})
+
+        //         }
+
+    })
+
+
+
+
+
+
+    var q = setInterval(function () {
+        if (p == 0) {
+            // document.getElementsByClassName(".switch2").click()
+            $(".switch2").click()
+            p = 1
+        }
+        else if (p == 1) {
+            // document.getElementsByClassName(".switch2").click()
+            $(".switch3").click()
+            p = 2
+        }
+        else if (p == 2) {
+            // document.getElementsByClassName(".switch2").click()
+            $(".switch1").click()
+            p = 0
+        }
+
+        $(".swiper-wrapper").mouseover(function () {
+            clearInterval(q)
+        })
+        // .mouseleave(function(){
+        //     setInterval(q) 
+        // })
+
+    }, 4000)
+//  $(".swiper-wrapper").mouseleave(function(){
+//             q = setInterval(4000)})
+
+
+
+
+
+</script>
+<script>
+    $(document).ready(function () {
+        $("#sp").click(function () {
+            window.location.href = "/商品页面/商品页面.html";
+        })
+    })
+</script>
+<!-- <script>
+window.onload=function(){
+ my$(".arrow-right").onclick =function(){
+         if(p==0){
+            document.getElementsByClassName(".switch2").click()
+         }
+        console.log(p);
+        
+     }}
+
+
+</script> -->
+
+
+<!-- 以下为第三个轮播图的js代码 -->
+<script>
+    $(function(){        
+        //获取要定位元素距离浏览器顶部的距离
+        var navH = $("#header").offset().top;
+        //滚动条事件
+        $(window).scroll(function(){
+                //获取滚动条的滑动距离
+                var scroH = $(this).scrollTop();
+                //滚动条的滑动距离大于等于定位元素距离浏览器顶部的距离，就固定，反之就不固定
+                if(scroH>=navH){
+                        $("#header").css({"position":"fixed","top":500,"left":0});
+                }else if(scroH<navH){
+                        $("#header").css({"position":"static","margin":"0 auto"});
+                }
+                console.log(scroH==navH);
+        })
+})
+</script>
+
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录注册</title>
+    <script src="./js/common.js"></script>
+    <script src="./js/jquery-1.8.2.js"></script>
+    <style type="text/css">
+        *{
+        margin: 0;
+        padding: 0;
+    }
+    .Zhuce{
+        width: 560px;
+        height: 650px;
+        margin: 50px auto;
+        position: relative;
+    }
+    .top{
+        width: 560px;
+        height:75px;
+        position: absolute;
+    }
+    .left{
+        width: 250px;
+        height: 75px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .right{
+        width: 250px;
+        height: 75px;
+        position: absolute;
+        top: 0;
+        left: 250px;
+    }
+    .Close{
+        width: 60px;
+        height: 75px;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 500px;
+    }
+    .close{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 15px;
+        left: 8px;
+    }
+    .middle{
+        width:560px ;
+    }
+    .phonenum{
+        width: 350px;
+        height: 50px;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+    }
+    #phonenum, #email,#password,#tpassword{
+        width: 300px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 50px;
+    }
+    .phone,.email,.lock,.tlock{
+        width: 50px;
+        height: 52px;
+        border: solid 1px  rgb(175, 174, 174);
+        background-color: rgb(247, 241, 241);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .phone img,.email img,.lock img,.tlock img{
+        width: 25px;
+        height: 25px;
+        margin: 11px;
+    }
+    .sclose{
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 10px;
+        left: 330px;
+    }
+    .emailAdd{
+        width: 350px;
+        height: 50px;
+        position: absolute;
+        top: 170px;
+        left: 100px;
+    }
+    .userpass{
+        width: 350px;
+        height: 50px;
+        position: absolute;
+        top: 240px;
+        left: 100px;
+    }
+   .usertpass{
+        width: 350px;
+        height: 50px;
+        position: absolute;
+        top: 310px;
+        left: 100px;
+   }
+   .remove{
+        width: 350px;
+        height: 40px;
+        /* border: solid gray 1px; */
+        
+        position: absolute;
+        top: 380px;
+        left: 100px;
+   }
+   .hua{
+        width: 45px;
+        height: 38px;
+        background-color: white;
+        border: rgb(219, 218, 218) solid 1px;
+        position: absolute;
+        left: 0; 
+        cursor: pointer;
+   }
+   .tu{
+        width: 15px;
+        height: 15px; 
+        /* position: absolute;
+        left: 0;  */
+        margin: 13px;
+   }
+   .huadong{
+        width: 305px;
+        height: 40px;
+        background-color: rgb(230, 224, 224);
+        position: absolute;
+        left: 45px; 
+   }
+   .huadong p{
+       text-align: center;
+       line-height: 40px;
+       color: grey;
+   }
+   .information{
+        width: 200px;
+        height: 40px;
+        position: absolute;
+        top: 435px;
+        left: 100px;
+   }
+   #yanzheng{
+        width: 100px;
+        height: 30px;
+        text-align: center;
+   }
+   .get{
+        width: 120px;
+        height: 34px;
+        background-color: rgb(253, 120, 31);
+        position: absolute;
+        top: 0;
+        left: 110px;
+        cursor: pointer;
+   }
+   .get p{
+        text-align: center;
+        line-height: 30px;
+        color: white;
+   }
+   #btn{
+        width: 140px;
+        height: 34px;
+        background-color: white;
+        color: rgb(71, 71, 71);
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: none;
+        cursor: pointer;
+        display: none; 
+    }
+   .get :hover{
+       color: rgb(69, 69, 173);
+   }
+   .check{
+       width: 350px;
+       height: 150px;
+       position: absolute;
+       top: 475px;
+       left: 100px;
+   }
+   .check span{
+       font-size: 9px;
+       color: gray;
+   }
+   #boxo{
+       width: 13px;
+       height: 13px;
+       position: absolute;
+       top: 5px;
+       left: 5px;
+   }
+   #boxt{
+       width: 13px;
+       height: 13px;
+       position: absolute;
+       top: 70px;
+       left: 5px;
+   }
+   .one{
+       width: 275px;
+       height: 60px;
+       position: absolute;
+       top: 0;
+       left: 40px;
+   }
+   .two{
+       width: 275px;
+       height: 60px;
+       position: absolute;
+       top: 65px;
+       left: 40px;
+   }
+   #cc a{
+        text-decoration: none;
+        color: rgb(253, 120, 31);
+   }
+  
+    .one #cc a:hover{
+       color: rgb(69, 69, 173);
+   }
+   .bottom{
+       width: 350px;
+       height: 50px;
+       position: absolute;
+       top: 575px;
+       left: 100px;
+   }
+   .zc{
+        width: 350px;
+        height: 50px;
+        background-color: skyblue;
+       
+   }
+   .zc p{
+        color:white ;
+        line-height: 50px;
+        font-size: 25px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .zc p:hover{
+        color: rgb(69, 69, 173);
+    }
+    .pb{
+        width: 350px;
+        height: 25px;
+        position: absolute;
+        top: 55px;
+        left: 30px;
+        color: grey;
+        font-size: 13px;
+    }
+    input{
+        outline: none;
+    }
+    #phonenumMsg,#emailMsg,#passwordMsg,#tpasswordMsg{
+        position: absolute;
+        top:16px ;
+        left: 400px;
+        height: 30px;
+        width: 300px;
+
+    }
+    .true{
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        top: 13px;
+        left: 360px;
+        display: none;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="Zhuce">
+        <div class="top">
+            <a href="./登录界面.html"><img src="./img/register_btn_01.jpg" class="left"></a>
+            <a href="./注册界面.html"><img src="./img/register_btn_02.jpg" class="right"></a>
+            <div class="Close"><a href="#"><img src="./img/close228.jpg" class="close"></a></div>
+        </div>
+        <div class="middle">
+            <div class="phonenum">
+                <div class="phone"><img src="./img/tel.png"></div>
+                <input  type="text" name="" id="phonenum" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;输入手机号" onblur="checkPhonenum(this)" />
+                <a href="#"><img src="./img/close.png" class="sclose" id="sclose1"></a>
+                <img src="./img/true.png" class="true">
+                <font color="red" id="phonenumMsg"></font>
+            </div>
+            <div class="emailAdd">
+                <div class="email"><img src="./img/email.png"></div>
+                <input  type="text" name="" id="email" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;输入邮箱地址&nbsp;(选填)" onblur="checkEmail(this)" />
+                <a href="#"><img src="./img/close.png" class="sclose" id="sclose2"></a>
+                <img src="./img/true.png" class="true">
+                <font color="red" id="emailMsg"></font>
+            </div>
+            <div class="userpass">
+                <div class="lock"><img src="./img/pass.png"></div>
+                <input  name="" id="password" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;密码由8-40个字符组成,须含字母和数字"  onblur="checkPassword()" />
+                <img src="./img/true.png" class="true">
+                <font color="red" id="passwordMsg"></font>
+            </div>
+            <div class="usertpass">
+                <div class="tlock"><img src="./img/pass.png"></div>    
+                 <input  name="" id="tpassword" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;再次输入密码"/> 
+                 <img src="./img/true.png" class="true">
+                 <font color="red" id="tpasswordMsg"></font>  
+            </div>
+            <div class="remove">
+                <div class="hua"><img src="./img/rt.png" class="tu"></div>
+                <div class="huadong"><p>请按住滑块,拖动到最右边</p></div>
+            </div>
+            <div class="information" >
+                <input type="text" name="" id="yanzheng" placeholder="输入短信验证码"/>
+                <div class="get">
+                    <p id="getp">获取短信验证码</p>
+                    <input type="button"id="btn" value="60s后重新获取验证码" disabled="disabled">
+                </div>
+            </div> 
+            <div class="check">
+                <input type="checkbox" id="boxo">&nbsp;&nbsp;
+                <div class="one">
+                <span class="read">在您填写信息之前,  &nbsp;&nbsp;请仔细阅读并完全理解</span>    
+                <span id="cc"><a href="https://www.sony.com.cn/privacy/terms.html"> “索尼隐私政策”</a></span>    
+                <span>、</span>    
+                <span id="cc"><a href="https://www.sonystyle.com.cn/mysony/condition/mysony_rhxz.htm"> “My Sony入会须知”</a></span>    
+                <span>、</span>    
+                <span id="cc"><a href="https://www.sonystyle.com.cn/mysony/condition/mysony_hytk.htm"> “My Sony会员条款”</a></span>    
+                <span>。</span>
+                </div>    
+                <input type="checkbox" checked="checked" id="boxt">&nbsp;&nbsp;    
+                <div class="two">
+                <span class="receive">是否愿意接收来自Sony的信息</span> 
+                </div>         
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="zc"><p>注册</p></div>
+            <p class="pb">如果您的会员账户无法登录，请联系400-810-1228</p>
+        </div>
+    </div>    
+</body>
+
+
+
+<script>
+    function check() {
+		var phonenum = document.getElementById("phonenum");
+		var email = document.getElementById("email").value;
+		var p = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/; //邮箱匹配的正则表达式
+		var password = document.getElementById("password").value;
+		var tpassword = document.getElementById("tpassword").value;
+		var isPass = true;
+
+		var phonenumMsg = document.getElementById("phonenumMsg");
+		var emailMsg = document.getElementById("emailMsg");
+		var passwordMsg = document.getElementById("passwordMsg");
+        var tpasswordMsg = document.getElementById("tpasswordMsg");
+		//            console.log(username);
+		//            console.log(username.value);
+
+		var length = phonenum.value.length;
+		if(length !=11) {
+			//                alert("手机号长度必须是11位");
+			phonenumMsg.innerText = "手机号长度必须是11位";
+			isPass = false;
+		} else {
+			// document.getElementsByClassName("true").style.display=block
+            // my$(".true").style.display=block
+            // var pp=my$(".true").style.display
+            // console.log("123")
+            phonenumMsg.innerText = "";
+		}
+
+		if(p.test(email) == false) {
+			//                alert("邮箱格式不正确");
+			emailMsg.innerText = "邮箱格式不正确";
+			isPass = false;
+		} else {
+			emailMsg.innerText = "";
+		}
+
+		if(password.length < 8 || password.length > 40) {
+			//                alert("密码必须在8-40之间");
+			passwordMsg.innerText = "密码必须在8-40之间";
+
+			isPass = false;
+		} else {
+			if(password != tpassword) {
+				//                    alert("两次输入密码不一致!");
+				passwordMsg.innerText = "两次输入密码不一致!";
+				isPass = false;
+			} else {
+				passwordMsg.innerText = "";
+			}
+		}
+		//            if(isPass==false){
+		//                return false;
+		//            }else{
+		//                return true;
+		//            }
+		return isPass;
+	}
+
+	function checkPhonenum(phonenum) {
+		var phonenumMsg = document.getElementById("phonenumMsg");
+		var length = phonenum.value.length;
+		if(length !=11) {
+			phonenumMsg.innerText = "手机号长度必须是11位";
+		} else {
+            document.getElementsByClassName("true")[0].style.display="block";
+			phonenumMsg.innerText = " ";
+		}
+	}
+
+	function checkEmail(email) {
+		var emailMsg = document.getElementById("emailMsg");
+		var p = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+		if(p.test(email.value) == false) {
+			emailMsg.innerText = "邮箱格式不正确";
+		} else {
+            document.getElementsByClassName("true")[1].style.display="block";
+			emailMsg.innerText = " ";
+		}
+	}
+	
+	function checkPassword(){
+		var password = document.getElementById("password").value;
+		var passwordMsg = document.getElementById("passwordMsg");
+		var tpassword = document.getElementById("tpassword").value;
+		var tpasswordMsg = document.getElementById("tpasswordMsg");
+		
+		if(password.length < 8 || password.length > 40) {
+			passwordMsg.innerText = "密码必须在8-40位之间";
+		} else {
+            document.getElementsByClassName("true")[2].style.display="block";
+			passwordMsg.innerText = " ";
+       
+
+		if(password != tpassword) {
+            document.getElementsByClassName("true")[3].style.display="none"
+			tpasswordMsg.innerText = "两次输入密码不一致!";
+		} else {
+                document.getElementsByClassName("true")[3].style.display="block"
+				tpasswordMsg.innerText = " ";
+			}
+        }
+	}
+   
+   
+
+
+
+    /* 获取验证码 */
+    //获取按钮绑定点击事件
+        my$("getp").onclick = function(){
+            //获取按钮隐藏,倒计时显示
+            my$("getp").style.display="none";
+            my$("btn").style.display="block";
+        
+        var time =60;//设置时间
+        var timeId =setInterval(function(){
+            time--;//每隔一秒减去1
+            //改变数字的显示
+            my$("btn").value =" "+time+"s后重新获取验证码";
+            //当time为0时，文本变为display:none - 停止定时器的运行
+            if(time<=0){
+                //停止定时器
+                clearInterval(timeId);
+                //按钮消失
+                my$("btn").style.display="none";
+                //重新获取框出现 
+                my$("getp").style.display="block";  
+            }
+        },1000);
+    }
+</script>
+
+
+<!-- 清空input框内自己输入的内容 -->
+<script>
+    $(function(){
+        $("#sclose1").click(function(){
+            $("#phonenum").val("");
+        })
+        $("#sclose2").click(function(){    
+            $("#email").val("");
+        })
+    })
+
+
+ 
+</script>
+</html>

@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+.BOX{
+    visibility: hidden;
+    width: 1120px;
+    height: 1300px;
+    margin: 100px auto;
+    position: relative;
+    visibility: visible;
+}
+.Top{
+    width: 1120px;
+    height: 150px;
+    position: absolute;
+}
+.current{
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.Right{
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 500px;
+}
+.Closeo{
+    width: 120px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 1000px;
+}
+.closeo{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+}
+.dom{
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    top: 300px;
+    left: 200px;
+}
+.usernum ,.Userpass{
+    width: 700px;
+    height: 100px;
+}
+#Password, #username{
+    width: 600px;
+    height: 100px;
+}
+#username{
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+.user {
+    width: 100px;
+    height: 100px;
+    border: solid 1px  rgb(175, 174, 174);
+    background-color: rgb(247, 241, 241);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.user img  ,.Lock img{
+    width: 50px;
+    height: 50px;
+    margin: 25px;
+}
+#Password{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+.Lock {
+    width: 100px;
+    height: 100px;
+    border: solid 1px  rgb(175, 174, 174);
+    background-color: rgb(247, 241, 241);
+    position: absolute;
+    top: 150px;
+    left: 0;
+}
+.Check{
+    width: 700px;
+    height: 50px;
+    position: absolute;
+    top: 300px;
+    left: 0;
+   
+}
+.Check input{
+    width: 30px;
+    height: 30px;
+    margin: 10px; 
+}
+.remmber{
+    line-height: 50px;
+    text-align: center;
+    color: grey;
+    font-size: 30px;
+}
+.forget{
+    line-height: 50px;
+    text-align: center;
+    color: grey;
+    font-size: 30px;
+    position: absolute;
+    right:0 ;
+    cursor: pointer;
+}
+.denglu{
+    width: 700px;
+    height: 100px;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    background-color: rgb(85, 85, 253); 
+}
+.denglu p{
+    color:white ;
+    line-height: 100px;
+    font-size: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+.denglu p:hover{
+    color: blue;
+}
+.Pb{
+    width: 700px;
+    height: 50px;
+    position: absolute;
+    top: 550px;
+    left: 60px;
+    color: grey;
+    font-size: 25px;
+}
+.Bottom{
+    width: 700px;
+    height: 300px;
+    position: absolute;
+    top: 620px;
+    cursor: pointer;
+}
+.xian{
+    color: rgb(216, 211, 211);
+    font-size: 30px;
+}
+.Bottom img{
+    width: 150px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+
+
+
+.phonenum{
+    width: 700px;
+    height: 100px;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+#phonenum, #email,#password,#tpassword{
+    width: 600px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+.phone,.email,.lock,.tlock{
+    width: 100px;
+    height: 100px;
+    border: solid 1px  rgb(175, 174, 174);
+    background-color: rgb(247, 241, 241);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.phone img,.email img,.lock img,.tlock img{
+    width: 50px;
+    height: 50px;
+    margin: 25px;
+}
+.sclose{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    left: 660px;
+}
+.emailAdd{
+    width: 700px;
+    height: 100px;
+    position: absolute;
+    top: 340px;
+    left: 200px;
+}
+.userpass{
+    width: 700px;
+    height: 100px;
+    position: absolute;
+    top: 480px;
+    left: 200px;
+}
+.usertpass{
+    width: 700px;
+    height: 100px;
+    position: absolute;
+    top: 620px;
+    left: 200px;
+}
+.remove{
+    width: 700px;
+    height: 80px;
+    position: absolute;
+    top: 760px;
+    left: 200px;
+}
+.hua{
+    width: 90px;
+    height: 80px;
+    background-color: white;
+    border: rgb(219, 218, 218) solid 1px;
+    position: absolute;
+    left: 0; 
+    cursor: pointer;
+}
+.tu{
+    width: 30px;
+    height: 30px; 
+    margin: 25px;
+}
+.huadong{
+    width: 610px;
+    height: 80px;
+    background-color: rgb(230, 224, 224);
+    position: absolute;
+    left: 90px; 
+}
+.huadong p{
+   text-align: center;
+   line-height: 80px;
+   color: grey;
+}
+.information{
+    width: 400px;
+    height: 80px;
+    position: absolute;
+    top: 870px;
+    left: 200px;
+}
+#yanzheng{
+    width: 200px;
+    height: 60px;
+    text-align: center;
+}
+.get{
+    width: 200px;
+    height: 60px;
+    background-color: rgb(253, 120, 31);
+    position: absolute;
+    top: 0;
+    left: 220px;
+    cursor: pointer;
+}
+.get p{
+    text-align: center;
+    line-height: 60px;
+    color: white;
+}
+.get :hover{
+   color: rgb(69, 69, 173);
+}
+.check{
+   width: 700px;
+   height: 300px;
+   position: absolute;
+   top: 950px;
+   left: 200px;
+}
+.check span{
+   font-size: 18px;
+   color: gray;
+}
+#boxo{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   top: 10px;
+   left: 10px;
+}
+#boxt{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   top: 120px;
+   left: 10px;
+}
+.one{
+   width: 570px;
+   height: 120px;
+   position: absolute;
+   top: 10px;
+   left: 80px;
+}
+.two{
+   width: 570px;
+   height: 120px;
+   position: absolute;
+   top: 120px;
+   left: 80px;
+}
+#cc{
+   color: rgb(253, 120, 31);
+   cursor: pointer;
+}
+.one #cc:hover{
+   color: rgb(69, 69, 173);
+}
+.bottom{
+   width: 700px;
+   height: 100px;
+   position: absolute;
+   top: 1150px;
+   left: 200px;
+}
+.zc{
+    width: 700px;
+    height: 100px;
+    background-color: rgb(85, 85, 253);
+   
+}
+.zc p{
+    color:white ;
+    line-height: 100px;
+    font-size: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+.pb{
+    width: 700px;
+    height: 50px;
+    position: absolute;
+    top: 110px;
+    left: 60px;
+    color: grey;
+    font-size: 25px;
+}
+

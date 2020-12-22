@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .big{
+           width: 600px;
+           height: 100px;
+         background-color: pink;
+         margin: auto;
+         text-align: center;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="big">
+        <h2>恭喜您，支付成功</h2>
+        <span id="jumpTo">10</span>后自动返回购物车
+        <p><button>立即返回</button></p>
+    </div>
+
+
+    <script>
+        window.onload=function(){
+            let timer=10;
+            setInterval(()=>{
+                
+                    timer--;
+                    document.getElementById("jumpTo").innerHTML=timer;
+                    if(timer==0){
+                        location.href="./购物车.html"
+                    }
+
+                
+            },1000)
+            
+        }
+        document.getElementsByTagName("button")[0].onclick=function(){
+            location.href="./购物车.html"
+        }
+
+
+      
+
+    </script>
+</body>
+</html>
